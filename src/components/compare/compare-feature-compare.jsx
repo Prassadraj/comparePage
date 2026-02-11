@@ -27,21 +27,23 @@ function FeatureComparison({ data }) {
         </div>
 
         {/* Decorative panel */}
-        <div className="hidden lg:block rounded-2xl bg-gradient-to-r from-green-50 via-green-200 to-green-50 h-full min-h-[280px]">
+        <div className="hidden lg:flex items-center justify-center rounded-2xl  h-full min-h-[280px]">
           <Image
             src="/compare/feature.png"
             width={500}
             alt="features"
             height={600}
-            className="h-full w-full"
+            className="object-contain"
           />
         </div>
       </div>
 
       {/* Winner */}
       <div className="relative bg-[#EBFAE2] border border-green-300 rounded-xl p-6">
-        <span className="absolute  rounded-r-4xl -top-4 left-6 bg-white border border-green-300 px-4 
-        py-1 rounded-md text-sm font-bold flex items-center gap-2">
+        <span
+          className="absolute  rounded-r-4xl -top-4 left-6 bg-white border border-green-300 px-4 
+        py-1 rounded-md text-sm font-bold flex items-center gap-2"
+        >
           🏆 {winner.title}
         </span>
         <p className="text-green-900 font-medium">
