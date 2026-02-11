@@ -6,12 +6,19 @@ function CompapreHero() {
     <div className="mx-auto  bg-[#102713] w-full ">
       <div className=" flex gap-5 flex-col items-center pt-32">
         <div className="flex gap-2 flex-col items-center ">
-          <p className="capitalize text-base text-gray-400">Micro1 VS HyrinG</p>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl text-center heading text-white">
-            Micro1 <span className="mx-2">vs</span> Hyring:
-          </h1>
-          <h2 className="text-white"> A Detailed Comparison</h2>
-          <div className="text-white">
+          <p className=" text-base text-gray-400 uppercase">Micro1 VS HyrinG</p>
+
+          <div className="flex items-center heading text-2xl md:text-3xl lg:text-6xl">
+            <h1 className=" text-center  text-[#9CE56D]">Micro1</h1>
+            <span className="mx-2 text-white ">vs</span>
+            <h1 className=" text-center  text-[#9CE56D]">Hyring:</h1>
+          </div>
+
+          <h2 className="text-white heading text-2xl md:text-3xl lg:text-6xl">
+            {" "}
+            A Detailed Comparison
+          </h2>
+          <div className="text-white flex flex-col md:flex-row md:gap-4 gap-1">
             <p>
               {" "}
               <span className="text-gray-400">Written on:</span> 18 Aug 2025
@@ -24,7 +31,7 @@ function CompapreHero() {
         </div>
 
         {/* ---- */}
-        <div className="flex flex-col text-white md:flex-row mx-auto gap-4 border-t-[1px] border-b-[1px] border-gray-500 p-4 md:p-6">
+        <div className="flex flex-col text-white md:flex-row mx-auto gap-4 md:gap-8 border-t-[1px] border-b-[1px] border-gray-500 p-4 md:p-6">
           {/* Written by */}
           <div className="flex gap-3 items-start">
             <Image
