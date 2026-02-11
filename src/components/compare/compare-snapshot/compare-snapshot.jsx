@@ -1,0 +1,304 @@
+"use client";
+import React from "react";
+import { comparisonData } from "../data";
+import SnapshotIcons from "./snapshot-icons";
+import Image from "next/image";
+import Link from "next/link";
+
+const TickIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+    <path
+      d="M2.33331 14C2.33331 20.4433 7.55666 25.6667 14 25.6667C20.4433 25.6667 25.6667 20.4433 25.6667 14C25.6667 7.55666 20.4433 2.33333 14 2.33333C7.55666 2.33333 2.33331 7.55666 2.33331 14Z"
+      fill="#097C38"
+    />
+    <path
+      d="M9.10001 14.0233L11.96 16.8833L18.8133 10.03"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const CrossIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+    <path
+      d="M2.33331 14C2.33331 20.4434 7.55664 25.6667 14 25.6667C20.4433 25.6667 25.6667 20.4434 25.6667 14C25.6667 7.55664 20.4433 2.33331 14 2.33331C7.55664 2.33331 2.33331 7.55664 2.33331 14Z"
+      fill="#CC1919"
+    />
+    <path
+      d="M10.1108 17.8892L17.8892 10.1108M10.1108 10.1108L17.8892 17.8892"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+function getLabelIcon(icon) {
+  const iconMap = {
+    trustpilot: "/asset/compareSnapshot-imgs/star.svg",
+    capterra: "/asset/compareSnapshot-imgs/arrow.svg",
+    g2: "/asset/compareSnapshot-imgs/g22.svg",
+  };
+
+  const src = iconMap[icon];
+
+  if (!src) return null;
+
+  return (
+    <>
+      {src !== "/asset/compareSnapshot-imgs/g22.svg" ? (
+        <Image
+          src={src}
+          alt={icon}
+          width={40}
+          height={40}
+          className="w-4 aspect-square"
+        />
+      ) : (
+        <div className="p-1 bg-[red] rounded-full flex justify-center items-center">
+          <Image
+            src={src}
+            alt={icon}
+            width={40}
+            height={40}
+            className="w-4 aspect-square"
+          />
+        </div>
+      )}
+    </>
+  );
+}
+
+function renderValue(value, type, isHyring, rowLabel) {
+  if (type === "boolean") {
+    return value ? <TickIcon /> : <CrossIcon />;
+  }
+  if (type === "link") {
+    return (
+      <a
+        className="text-xs md:text-base"
+        href={"https://" + value}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: "#0E0F0C",
+          textDecoration: "underline",
+        }}
+      >
+        {value}
+      </a>
+    );
+  }
+  if (
+    isHyring &&
+    typeof value === "string" &&
+    value.includes("/5") &&
+    ["Trustpilot Score", "Capterra – Ease of Use", "G2 Rating"].includes(
+      rowLabel
+    )
+  ) {
+    return (
+      <div style={{ alignItems: "center" }}>
+        <a href="#" className="flex gap-1">
+          <span>{value}</span>
+          <SnapshotIcons type="link" />
+        </a>
+      </div>
+    );
+  }
+
+  return (
+    <span
+      style={{
+        color: "#0E0F0C",
+        textAlign: "center",
+        fontSize: "inherit",
+      }}
+    >
+      {value?.includes("per interview") ? (
+        <>
+          <strong>{value.split(" ")[0]}</strong>{" "}
+          {value.split(" ").slice(1).join(" ")}
+        </>
+      ) : (
+        value
+      )}
+    </span>
+  );
+}
+
+export default function CompareSnapshot() {
+  const { title, rows } = comparisonData;
+
+  const rowH = 48;
+  const headerH = 68;
+
+  return (
+    <div
+      style={{
+        padding: "24px 0",
+        width: "100%",
+      }}
+    >
+      <h2
+        className="heading"
+        style={{
+          marginBottom: 20,
+        }}
+      >
+        {title}
+      </h2>
+
+      <div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
+          {/* LABELS */}
+          <div style={{ borderRadius: "12px 0 0 12px" }}>
+            <div style={{ height: headerH }} />
+            {rows.map((row, i) => (
+              <div
+                className="p-4 md:p-8"
+                key={i}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+
+                  height: rowH,
+                  background: "#EBFAE2",
+                  borderBottom:
+                    i < rows.length - 1 ? "1px solid rgba(0,0,0,0.08)" : "none",
+                  borderRadius:
+                    i === 0
+                      ? "12px 0 0 0"
+                      : i === rows.length - 1
+                      ? "0 0 0 12px"
+                      : "0",
+                }}
+              >
+                {row.icon && getLabelIcon(row.icon)}
+                <span
+                  className="font-bold text-xs md:text-base"
+                  style={{
+                    lineHeight: 1.3,
+                    color: "#0E0F0C",
+                  }}
+                >
+                  {row.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* HYRING */}
+          <div style={{ position: "relative" }}>
+            <div
+              style={{
+                position: "absolute",
+                inset: -4,
+                background: "rgba(86,183,62,0.15)",
+                filter: "blur(10px)",
+                borderRadius: 16,
+                zIndex: 0,
+              }}
+            />
+            <div
+              style={{
+                position: "relative",
+                zIndex: 1,
+                background: "#fff",
+                border: "2px solid #56B73E",
+                borderRadius: 12,
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  height: headerH,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderBottom: "1px solid rgba(0,0,0,0.08)",
+                  gap: 6,
+                }}
+              >
+                <SnapshotIcons type={"logo"} />
+              </div>
+              {rows.map((row, i) => (
+                <div
+                  className="p-4 md:p-8"
+                  key={i}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+
+                    height: rowH,
+                    fontSize: 14,
+                    borderBottom:
+                      i < rows.length - 1
+                        ? "1px solid rgba(0,0,0,0.08)"
+                        : "none",
+                  }}
+                >
+                  {renderValue(row.hyring, row.type, true, row.label)}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* MICRO1 */}
+          <div
+            style={{
+              borderLeft: "none",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              style={{
+                height: headerH,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <span className="md:text-3xl font-extrabold">Micro1</span>
+            </div>
+            {rows.map((row, i) => (
+              <div
+                className="p-4 md:p-8"
+                key={i}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+
+                  height: rowH,
+                  fontSize: 14,
+                  background: "#fff",
+                  border: "1px solid rgba(0,0,0,0.08)",
+                  borderTop: i === 0 ? "1px solid rgba(0,0,0,0.08)" : "none",
+                  borderRadius:
+                    i === 0
+                      ? "12px 12px 0 0"
+                      : i === rows.length - 1
+                      ? "0 0 12px 12px"
+                      : "0",
+                }}
+              >
+                {renderValue(row.micro1, row.type, false)}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <p className="text-xs text-gray-500" style={{ marginTop: 16 }}>
+        Ratings change over time. Review live pages for the latest updates.
+      </p>
+    </div>
+  );
+}
