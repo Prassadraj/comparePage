@@ -8,7 +8,7 @@ export default function CostPricingStructure({ data }) {
     <section className="">
       <div className="mx-auto ">
         {/* Heading */}
-        <h2 className="text-2xl heading md:text-4xl font-black mb-6 md:mb-8 text-center">
+        <h2 className="text-2xl heading md:text-4xl font-black mb-6 md:mb-8 ">
           {title}
         </h2>
 
