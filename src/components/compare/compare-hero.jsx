@@ -8,13 +8,13 @@ function CompapreHero() {
         <div className="flex gap-2 flex-col items-center ">
           <p className=" text-base text-gray-400 uppercase">Micro1 VS HyrinG</p>
 
-          <div className="flex items-center heading text-2xl md:text-3xl lg:text-6xl">
+          <div className="flex items-center mainheading text-2xl md:text-3xl lg:text-6xl gap-1">
             <h1 className=" text-center  text-[#9CE56D]">Micro1</h1>
             <span className="mx-2 text-white ">vs</span>
             <h1 className=" text-center  text-[#9CE56D]">Hyring:</h1>
           </div>
 
-          <h2 className="text-white heading text-2xl md:text-3xl lg:text-6xl">
+          <h2 className="text-white mainheading text-2xl md:text-3xl lg:text-6xl">
             {" "}
             A Detailed Comparison
           </h2>

@@ -45,6 +45,12 @@ body {
   font-style: normal;
   font-display: swap;
 }
+.mainheading {
+  font-family: "ClashDisplay", sans-serif;
+  font-weight: 600;
+  font-size: 28px; /* Mobile */
+  line-height: 1.3;
+}
 
 /* =========================
    HEADING STYLES
@@ -72,6 +78,10 @@ body {
   .heading {
     font-size: 32px; /* Tablet & up */
   }
+  .mainheading {
+    font-size: 42px; /* Tablet & up */
+  }
+  
 
   .sub-heading {
     font-size: 28px;
