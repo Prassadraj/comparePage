@@ -48,7 +48,7 @@ body {
 .mainheading {
   font-family: "ClashDisplay", sans-serif;
   font-weight: 600;
-  font-size: 28px; /* Mobile */
+  font-size: 32px; /* Mobile */
   line-height: 1.3;
 }
 
@@ -95,3 +95,5 @@ body {
 .greyBg {
   background: #edefec80;
 }
+
+

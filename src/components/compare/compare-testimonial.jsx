@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import { Arrow } from "../../../public/asset/arrow";
 
 const data = [
   {
@@ -62,189 +64,120 @@ export default function ClientTestimonials() {
     }, 180);
   };
 
+  const handlePrev = () => {
+    const prev = active === 0 ? data.length - 1 : active - 1;
+    switchTab(prev);
+  };
+
+  const handleNext = () => {
+    const next = (active + 1) % data.length;
+    switchTab(next);
+  };
+
   const t = data[active];
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: isMobile ? "32px 16px" : "40px 24px",
-      }}
-    >
-      <div style={{ width: "100%", maxWidth: 880 }}>
-        {/* Title */}
-        <h2 className="heading"
-          style={{
-            color: "#1b2e1b",
-       
-            fontWeight: 900,
-            textAlign: "center",
-            marginBottom: isMobile ? 20 : 32,
-            letterSpacing: "-0.5px",
-            lineHeight: 1.1,
-          }}
-        >
+    <div className="flex items-center justify-center mx-auto container ">
+      <div className="w-full max-w-[880px]">
+        <h2 className="heading text-2xl md:text-4xl font-black text-[#1b2e1b] text-center mb-5 md:mb-8 tracking-tight leading-tight">
           Client testimonials
         </h2>
 
-        {/* Card */}
         <div
-          style={{
-            backgroundColor: "#e6e8e1",
-            borderRadius: isMobile ? 18 : 24,
-            padding: isMobile ? "28px 20px" : "48px 48px",
-            marginBottom: isMobile ? 16 : 24,
-            opacity: fade ? 1 : 0,
-            transition: "opacity 0.2s ease",
-          }}
+          className="bg-[#e6e8e1] rounded-2xl md:rounded-3xl p-7 md:p-12 mb-4 md:mb-6 transition-opacity duration-200"
+          style={{ opacity: fade ? 1 : 0 }}
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: isMobile ? "column-reverse" : "row",
-              gap: isMobile ? 24 : 40,
-              alignItems: isMobile ? "center" : "flex-start",
-            }}
-          >
-            {/* Left content */}
-            <div
-              style={{
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                minHeight: isMobile ? "auto" : 280,
-                textAlign: isMobile ? "center" : "left",
-              }}
-            >
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+            <div className="flex-1 flex flex-col justify-between md:min-h-[280px] text-left">
               <div>
-                {/* Quote marks */}
-                <div
-                  style={{
-                    display: "flex",
-                    gap: 4,
-                    marginBottom: isMobile ? 16 : 24,
-                    justifyContent: isMobile ? "center" : "flex-start",
-                  }}
-                >
-                  <div className="rounded-bl-2xl rounded-br-sm"
-                    style={{
-                      width: 20,
-                      height: 28,
-                      backgroundColor: "#c2c4bd",
-              
-                    }}
-                  />
-                  <div className="rounded-bl-2xl rounded-br-sm"
-                    style={{
-                      width: 20,
-                      height: 28,
-                      backgroundColor: "#c2c4bd",
-                
-                    }}
-                  />
+                <div className="flex gap-1 mb-4 md:mb-6">
+                  <div className="w-5 h-9 md:h-7 bg-[#c2c4bd] rounded-bl-2xl rounded-br-sm" />
+                  <div className="w-5  h-9 md:h-7 bg-[#c2c4bd] rounded-bl-2xl rounded-br-sm" />
                 </div>
 
-                {/* Quote text */}
-                <p
-                  style={{
-                    color: "#1b2e1b",
-                    fontSize: isMobile ? 18 : 24,
-                    fontWeight: 500,
-                    lineHeight: 1.45,
-                    margin: 0,
-                    letterSpacing: "-0.2px",
-                  }}
-                >
+                <p className="text-[#1b2e1b] text-lg md:text-2xl font-medium leading-snug tracking-tight m-0">
                   {t.quote}
                 </p>
               </div>
 
-              {/* Author info */}
-              <div style={{ marginTop: isMobile ? 24 : 40 }}>
-                <p
-                  style={{
-                    color: "#1b2e1b",
-                    fontWeight: 700,
-                    fontSize: isMobile ? 15 : 16,
-                    margin: 0,
-                    marginBottom: 4,
-                  }}
-                >
+              <div className="mt-6 md:mt-10">
+                <p className="text-[#1b2e1b] font-bold text-base md:text-lg m-0 mb-1">
                   {t.category}
                 </p>
-                <p
-                  style={{
-                    color: "#6b7a6b",
-                    fontSize: isMobile ? 14 : 15,
-                    margin: 0,
-                    fontWeight: 400,
-                  }}
-                >
+                <p className="text-[#6b7a6b] text-sm md:text-base m-0 font-normal">
                   {t.role}
                 </p>
               </div>
             </div>
 
-            {/* Right image */}
-            <div style={{ flexShrink: 0 }}>
-              <img
+            <div className="w-full md:w-auto flex-shrink-0">
+              <Image
                 src={t.image}
                 alt={t.role}
-                style={{
-                  width: isMobile ? 160 : 220,
-                  height: isMobile ? 200 : 270,
-                  objectFit: "cover",
-                  borderRadius: isMobile ? 14 : 18,
-                  display: "block",
-                }}
+                width={400}
+                height={500}
+                className="w-full md:w-56 h-full md:h-[270px] object-cover rounded-2xl md:rounded-3xl"
               />
             </div>
           </div>
         </div>
 
-        {/* Divider line */}
-        <div
-          style={{
-            width: "100%",
-            height: 1,
-            backgroundColor: "#e0e0dc",
-            marginBottom: 0,
-          }}
-        />
-
-        {/* Tabs */}
-        <div style={{ display: "flex", gap: isMobile ? 12 : 24 }}>
-          {data.map((item, i) => {
-            const isActive = i === active;
-            return (
+        {isMobile ? (
+          <>
+            <div className="relative flex items-center gap-1">
               <button
-                key={item.id}
-                onClick={() => switchTab(i)}
-                style={{
-                  flex: 1,
-                  background: "none",
-                  border: "none",
-                  borderTop: `3.5px solid ${isActive ? "#1b2e1b" : "#c8cac2"}`,
-                  paddingTop: isMobile ? 12 : 16,
-                  paddingBottom: 8,
-                  cursor: "pointer",
-                  fontFamily: "'Inter', system-ui, sans-serif",
-                  fontSize: isMobile ? 13 : 16,
-                  fontWeight: isActive ? 600 : 400,
-                  color: isActive ? "#1b2e1b" : "#8a9488",
-                  letterSpacing: "-0.1px",
-                  transition: "all 0.25s ease",
-                  textAlign: "center",
-                }}
+                onClick={handlePrev}
+                className="w-10 h-10 rotate-180 bg-white rounded-full border border-[#e0e0dc] flex items-center justify-center flex-shrink-0"
               >
-                {item.tab}
+                {Arrow}
               </button>
-            );
-          })}
-        </div>
+
+              <div className="flex-1 h-px bg-[#e0e0dc] relative overflow-hidden">
+                <div
+                  className="absolute top-0 left-0 h-full bg-[#1b2e1b] transition-all duration-200"
+                  style={{ width: `${((active + 1) / data.length) * 100}%` }}
+                />
+              </div>
+
+              <button
+                onClick={handleNext}
+                className="w-10 h-10 bg-white rotate-180 rounded-full border border-[#e0e0dc] flex items-center justify-center flex-shrink-0"
+              >
+                <div className="rotate-180">{Arrow}</div>
+              </button>
+            </div>
+
+            <div className="text-center text-xl font-semibold text-[#1b2e1b]">
+              {t.tab}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="w-full h-px bg-[#e0e0dc] mb-0" />
+
+            <div className="flex gap-6">
+              {data.map((item, i) => {
+                const isActive = i === active;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => switchTab(i)}
+                    className="flex-1 bg-transparent border-none pt-4 pb-2 cursor-pointer text-base font-semibold text-center transition-all duration-200"
+                    style={{
+                      borderTop: `3.5px solid ${
+                        isActive ? "#1b2e1b" : "#c8cac2"
+                      }`,
+                      color: isActive ? "#1b2e1b" : "#8a9488",
+                      fontWeight: isActive ? 600 : 400,
+                    }}
+                  >
+                    {item.tab}
+                  </button>
+                );
+              })}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

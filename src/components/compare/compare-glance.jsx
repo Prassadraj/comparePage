@@ -8,7 +8,7 @@ export default function CompareGlance() {
   const renderValue = (value) => {
     if (value === true) {
       return (
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <SnapshotIcons type="tick" />
         </div>
       );
@@ -21,7 +21,7 @@ export default function CompareGlance() {
   };
 
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gray-100 mx-auto container">
       <div className=" ">
         <h2 className="heading mb-4 md:mb-6">{title}</h2>
 

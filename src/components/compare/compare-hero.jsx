@@ -11,10 +11,10 @@ function CompapreHero() {
           <div className="flex items-center mainheading text-2xl md:text-3xl lg:text-6xl gap-1">
             <h1 className=" text-center  text-[#9CE56D]">Micro1</h1>
             <span className="mx-2 text-white ">vs</span>
-            <h1 className=" text-center  text-[#9CE56D]">Hyring:</h1>
+            <h1 className=" text-center  text-[#9CE56D]">Hyring<span className="text-white">:</span></h1>
           </div>
 
-          <h2 className="text-white mainheading text-2xl md:text-3xl lg:text-6xl">
+          <h2 className="text-white text-center mainheading text-4xl md:text-3xl lg:text-6xl">
             {" "}
             A Detailed Comparison
           </h2>
@@ -72,7 +72,7 @@ function CompapreHero() {
 
         {/* ---- */}
 
-        <div className="w-[300px] md:w-[500px] lg:w-[600px] relative">
+        <div className="w-full max-w-[734px] relative">
           <Image
             src="/compare/frame.png"
             width={300}

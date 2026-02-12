@@ -5,7 +5,7 @@ function FeatureComparison({ data }) {
   const { title, intro, section, winner } = data;
 
   return (
-    <div className=" mx-auto   ">
+    <div className="  mx-auto container ">
       {/* Header */}
       <div className="mb-6">
         <h2 className="text-2xl md:text-3xl font-semibold text-[#0E2A18] mb-3 heading">
@@ -15,11 +15,11 @@ function FeatureComparison({ data }) {
       </div>
 
       {/* Section */}
-      <h3 className="text-xl font-semibold text-[#0E2A18] mb-8">
+      <h3 className="text-xl font-semibold text-[#0E2A18] mb-3">
         {section.heading}
       </h3>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10  items-center mb-10">
         {/* Text */}
         <div className="flex flex-col gap-10">
           <SideBlock data={section.left} />
@@ -33,7 +33,7 @@ function FeatureComparison({ data }) {
             width={500}
             alt="features"
             height={600}
-            className="object-contain"
+            className="object-contain xl:w-[700px]"
           />
         </div>
       </div>

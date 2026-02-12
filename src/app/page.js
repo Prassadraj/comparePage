@@ -16,6 +16,8 @@ import ClientTestimonials from "@/components/compare/compare-testimonial";
 import HyringWorkflow from "@/components/compare/compare-workflow";
 import {
   briefDataOne,
+  comparePlateformData,
+  conclusionData,
   featureComparisonDataUiUx,
   hyringReview,
   micro1Review,
@@ -58,10 +60,10 @@ export default function Home() {
         <FeatureComparison data={featureComparisonData} />
         <FeatureComparison data={featureComparisonDataUiUx} />
         <CostPricingStructure data={costPricingData} />
-        <CompareConclusion />
+        <CompareConclusion data={conclusionData} />
         <ClientTestimonials />
         <FAQ />
-        <ComparePlatform />
+        <ComparePlatform data={comparePlateformData} />
       </div>
       <HyringFooter />
     </>

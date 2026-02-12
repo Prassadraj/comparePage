@@ -72,131 +72,64 @@ export default function Micro1Review({ data }) {
 
   return (
     <div>
-      <div style={{ margin: "0 auto" }}>
-        <h1
-          className="heading"
-          style={{
-            fontSize: isMobile ? 24 : 36,
-            fontWeight: 900,
-            color: "#1b2e1b",
-            margin: "0 0 20px",
-          }}
-        >
+      <div className="mx-auto container">
+        <h1 className="heading text-2xl md:text-4xl font-black text-[#1b2e1b] mb-0 md:mb-5">
           {data.title}
         </h1>
-        <h1
-          className="heading"
-          style={{
-            fontSize: isMobile ? 18 : 24,
-
-            color: "#1b2e1b",
-          }}
-        >
+        <h1 className="heading text-lg md:text-2xl text-[#1b2e1b]">
           Product Ecosystem
         </h1>
-        <p
-          style={{
-            fontSize: isMobile ? 13 : 16,
-            color: "#333",
-            lineHeight: 1.6,
-            margin: "0 0 28px",
-          }}
-        >
+        <p className="text-sm md:text-base text-[#333] leading-[1.6] mb-0 md:mb-7">
           {data.description}
         </p>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: isMobile ? "column" : "row",
-            gap: isMobile ? 24 : 48,
-            alignItems: "flex-start",
-          }}
-        >
-          {/* Image - first on mobile */}
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start">
           {isMobile && (
             <div
-              style={{
-                width: "100%",
-                opacity: imgFade ? 1 : 0,
-                transition: "opacity 0.2s ease",
-              }}
+              className="w-full opacity-0 transition-opacity duration-200"
+              style={{ opacity: imgFade ? 1 : 0 }}
             >
-              <div
-                style={{
-                  backgroundColor: "#e2e4de",
-                  borderRadius: 16,
-                  padding: 14,
-                }}
-              >
-                <img
+              <div className="bg-[#e2e4de] rounded-2xl p-3.5">
+                <Image
                   src={currentItem.image}
                   alt={currentItem.title}
-                  style={{
-                    width: "100%",
-                    height: 200,
-                    objectFit: "cover",
-                    borderRadius: 12,
-                    display: "block",
-                  }}
+                  width={400}
+                  height={200}
+                  className="w-full h-[200px] object-cover rounded-xl block"
                 />
               </div>
             </div>
           )}
 
-          {/* Menu items */}
-          <div style={{ flex: 1, minWidth: 0 }}>
+          <div className="w-full md:w-1/2">
             {data.items.map((item, i) => {
               const isActive = i === active;
               return (
                 <div
                   key={item.id}
                   onClick={() => handleClick(i)}
-                  style={{ cursor: "pointer" }}
+                  className="cursor-pointer"
                 >
                   <div
-                    className={`${!isActive ? "bg-transparent" : "bg-white"}`}
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "flex-start",
-                      position: "relative",
-                    }}
+                    className={`flex flex-row items-start relative ${
+                      !isActive ? "bg-transparent" : "bg-white"
+                    }`}
                   >
                     <div
+                      className="w-1 flex-shrink-0 mr-3 md:mr-4 self-stretch rounded-sm relative overflow-hidden"
                       style={{
-                        width: 4,
-                        flexShrink: 0,
-                        marginRight: isMobile ? 12 : 16,
-                        alignSelf: "stretch",
                         backgroundColor: isActive ? "#e0e0dc" : "transparent",
-                        borderRadius: 2,
-                        position: "relative",
-                        overflow: "hidden",
                         minHeight: isMobile ? 50 : 60,
                       }}
                     >
                       {isActive && (
                         <div
-                          style={{
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            width: "100%",
-                            height: `${progress * 100}%`,
-                            backgroundColor: "#56B73E",
-                            borderRadius: 2,
-                          }}
+                          className="absolute top-0 left-0 w-full bg-[#56B73E] rounded-sm"
+                          style={{ height: `${progress * 100}%` }}
                         />
                       )}
                     </div>
-                    <div
-                      style={{
-                        flex: 1,
-                        padding: isMobile ? "10px 0" : "18px 0",
-                        textAlign: isMobile ? "center" : "left",
-                      }}
-                    >
+                    <div className="flex-1 py-2.5 md:py-4.5 text-center md:text-left">
                       <div className="flex gap-2">
                         {item.icon && (
                           <Image
@@ -207,94 +140,48 @@ export default function Micro1Review({ data }) {
                             className="w-3 md:w-6 aspect-square"
                           />
                         )}
-
-                        <h3
-                          style={{
-                            fontSize: isMobile ? 15 : 20,
-                            fontWeight: 700,
-                            color: "#1b2e1b",
-                            margin: 0,
-                            lineHeight: 1.3,
-                          }}
-                        >
+                        <h3 className="text-base md:text-xl font-bold text-[#1b2e1b] m-0 leading-[1.3]">
                           {item.title}
                         </h3>
                       </div>
-
                       {isActive && (
-                        <p
-                          style={{
-                            fontSize: isMobile ? 12 : 15,
-                            color: "#6b7a6b",
-                            margin: "4px 0 0",
-                            lineHeight: 1.4,
-                            animation: "fadeIn 0.3s ease",
-                          }}
-                        >
+                        <p className="text-xs md:text-base text-[#6b7a6b] mt-1 leading-[1.4] animate-[fadeIn_0.3s_ease]">
                           {item.description}
                         </p>
                       )}
                     </div>
                   </div>
-                  <div
-                    style={{
-                      height: 1,
-                      backgroundColor: "#d8d8d4",
-                      marginLeft: isMobile ? 0 : 20,
-                    }}
-                  />
+                  <div className="h-px bg-[#d8d8d4] ml-0 md:ml-5" />
                 </div>
               );
             })}
           </div>
 
-          {/* Image - right on desktop */}
           {!isMobile && (
             <div
-              style={{
-                flexShrink: 0,
-                width: 620,
-                opacity: imgFade ? 1 : 0,
-                transition: "opacity 0.2s ease",
-              }}
+              className="md:w-1/2 flex-shrink-0 object-contain opacity-0 transition-opacity duration-200"
+              style={{ opacity: imgFade ? 1 : 0 }}
             >
               <div
-                className="p-10"
+                className="p-10 bg-cover bg-center bg-no-repeat rounded-[20px]"
                 style={{
                   backgroundImage:
                     "url('/asset/productEcosystem-imgs/bgg.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderRadius: 20,
                 }}
               >
-                <img
+                <Image
                   src={currentItem.image}
                   alt={currentItem.title}
-                  style={{
-                    width: "100%",
-                    height: 300,
-                    objectFit: "cover",
-                    borderRadius: 12,
-                    display: "block",
-                  }}
+                  width={400}
+                  height={300}
+                  className="w-full h-[300px] object-cover rounded-xl block"
                 />
               </div>
             </div>
           )}
         </div>
 
-        <p
-          className="mt-4 md:mt-6"
-          style={{
-            fontSize: isMobile ? 12 : 15,
-            color: "#444",
-            lineHeight: 1.6,
-
-            textAlign: isMobile ? "center" : "left",
-          }}
-        >
+        <p className="mt-4 md:mt-6 text-xs md:text-base text-[#444] leading-[1.6] text-center md:text-left">
           {data.shortdescription}
         </p>
       </div>

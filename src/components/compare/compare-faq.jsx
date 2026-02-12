@@ -47,7 +47,7 @@ export default function FAQ() {
   const toggle = (id) => setOpenId(openId === id ? null : id);
 
   return (
-    <div className="  flex items-center justify-center ">
+    <div className="  flex items-center justify-center mx-auto container">
       <div className="w-full" style={{ maxWidth: 860 }}>
         {/* Title */}
         <h2

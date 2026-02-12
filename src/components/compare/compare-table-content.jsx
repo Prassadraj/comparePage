@@ -8,30 +8,33 @@ function CompareTable() {
   const right = data?.slice(mid);
 
   return (
-    <div
-      className="flex flex-col w-full greyBg lg:p-10 p-4 rounded-2xl
-        "
-    >
+    <div className="flex flex-col w-full greyBg lg:p-10 p-4 container mx-auto rounded-2xl border border-gray-300">
       <div className="flex flex-col gap-4">
-        <h1 className="font-bold text-xl uppercase">Table of Contents</h1>
+        <h1 className="font-bold text-xl uppercase xl:text-2xl">
+          Table of Contents
+        </h1>
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left */}
-          <div className="flex flex-col gap-3 flex-1">
+          <div className="flex flex-col gap-3 w-full md:flex-1">
             {left.map((item, index) => (
-              <p key={index} className="flex gap-2 items-start">
-                <span className="w-6 text-right shrink-0">
-                  {index + 1}.
-                </span>
+              <p
+                key={index}
+                className="flex gap-2 w-full items-start text-base xl:text-xl"
+              >
+                <span className="w-6 text-right shrink-0">{index + 1}.</span>
                 <span className="text-left">{item}</span>
               </p>
             ))}
           </div>
 
           {/* Right */}
-          <div className="flex flex-col gap-3 flex-1">
+          <div className="flex flex-col gap-3 w-full md:flex-1">
             {right.map((item, index) => (
-              <p key={index} className="flex gap-2 items-start">
-                <span className=" w-6 text-right shrink-0">
+              <p
+                key={index}
+                className="flex gap-2 items-start text-base xl:text-xl"
+              >
+                <span className="w-6 text-right shrink-0">
                   {mid + index + 1}.
                 </span>
                 <span className="text-left">{item}</span>

@@ -138,7 +138,7 @@ export default function CompareSnapshot() {
   const headerH = 68;
 
   return (
-    <div
+    <div className="container mx-auto"
       style={{
         padding: "24px 0",
         width: "100%",
@@ -210,7 +210,7 @@ export default function CompareSnapshot() {
                 position: "relative",
                 zIndex: 1,
                 background: "#fff",
-                border: "2px solid #56B73E",
+                border: "1px solid #56B73E",
                 borderRadius: 12,
                 overflow: "hidden",
               }}

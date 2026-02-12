@@ -2,7 +2,7 @@ import React from "react";
 
 function CompareEco() {
   return (
-    <div className="flex flex-col lg:gap-10 gap-5">
+    <div className="flex flex-col lg:gap-10 gap-5 container mx-auto">
       <div className="flex flex-col md:gap-2">
         <h1 className="heading">Ecosystem: Products & Hiring Workflow</h1>
         <div className="flex flex-col gap-2">

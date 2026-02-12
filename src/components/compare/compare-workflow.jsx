@@ -143,7 +143,7 @@ export default function HiringWorkflow({
   if (!workflowSteps.length) return null;
 
   return (
-    <div style={{ fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }}>
+    <div className="mx-auto container">
       <style>{`
         @keyframes fadeUp { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
         @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }

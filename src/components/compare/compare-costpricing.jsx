@@ -6,9 +6,9 @@ export default function CostPricingStructure({ data }) {
 
   return (
     <section className="">
-      <div className="mx-auto ">
+      <div className="mx-auto  container">
         {/* Heading */}
-        <h2 className="text-2xl heading md:text-4xl font-black mb-6 md:mb-8 ">
+        <h2 className="text-2xl heading md:text-4xl max-w-xs md:max-w-full font-black mb-6 md:mb-8 ">
           {title}
         </h2>
 
@@ -114,10 +114,10 @@ export default function CostPricingStructure({ data }) {
 
               {/* Hyring badge */}
               <div
-                className="rounded-xl py-2.5 px-4 text-center font-bold text-base mb-3"
+                className="rounded-xl  px-4 text-center flex items-center justify-center font-bold text-base mb-3"
                 style={{ background: "#9CE56D", color: "#000" }}
               >
-                ✖ hyring
+                <SnapshotIcons type="logo" />
               </div>
               {row.hyring.map((t, j) => (
                 <p

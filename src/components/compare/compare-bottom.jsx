@@ -3,7 +3,7 @@ import React from "react";
 
 function CompareBottom() {
   return (
-    <div className="flex flex-col lg:gap-10 gap-5">
+    <div className="flex flex-col lg:gap-10 gap-5 mx-auto container">
       <div className="flex flex-col md:gap-2">
         <h1 className="heading">Bottom Line</h1>
         <div className="flex flex-col md:gap-5 gap-2 ">

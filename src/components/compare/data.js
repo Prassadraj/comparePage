@@ -24,18 +24,16 @@ export const compareHeroData = {
 };
 
 export const Tabledata = [
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
+  "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
+  "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
+  "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
+  "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
+  "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
+  "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
+  "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
+  "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
+  
 ];
 
 export const briefDataOne = {
@@ -1044,4 +1042,12 @@ export const vettingData = [
       </svg>
     ),
   },
+];
+
+// comparePlateform 
+
+export const comparePlateformData = [
+  { img: "/asset/otherPlatform-imgs/frame1.svg" },
+  { img: "/asset/otherPlatform-imgs/frame2.svg" },
+  { img: "/asset/otherPlatform-imgs/frame3.svg" },
 ];
