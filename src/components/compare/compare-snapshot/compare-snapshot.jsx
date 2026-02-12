@@ -229,19 +229,20 @@ export default function CompareSnapshot() {
                   justifyContent: "center",
                   gap: 6,
                 }}
+                className="px-3"
               >
                 <SnapshotIcons type={"logo"} />
               </div>
               {rows.map((row, i) => (
                 <div
-                  className="py-4 md:py-9 px-2"
+                  className="py-4 md:py-9 px-2 text-xs md:text-base"
                   key={i}
                   style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     height: rowH,
-                    fontSize: 14,
+               
                     borderBottom:
                       i < rows.length - 1
                         ? "1px solid rgba(0,0,0,0.08)"
@@ -276,14 +277,14 @@ export default function CompareSnapshot() {
             <div className="md:pr-5 pr-2 bg-white rounded-r-xl">
               {rows.map((row, i) => (
                 <div
-                  className="py-4 md:py-9 mr-2 px-2"
+                  className="py-4 md:py-9 mr-2 px-2 text-xs md:text-base"
                   key={i}
                   style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     height: rowH,
-                    fontSize: 14,
+                   
                     background: "#fff",
                     borderBottom:
                       i < rows.length - 1
