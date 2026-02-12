@@ -127,10 +127,12 @@ export default function Micro1Review({ data }) {
                           className="absolute top-0 left-0 w-full star-green rounded-sm"
                           style={{ height: `${progress * 100}%` }}
                         />
+                        
                       )}
                     </div>
                     <div className="flex-1 py-2.5 md:py-4.5 text-center md:text-left">
                       <div className="flex gap-2">
+                        
                         {item.icon && (
                           <Image
                             src={item.icon}
@@ -151,6 +153,7 @@ export default function Micro1Review({ data }) {
                       )}
                     </div>
                   </div>
+             
                   <div className="h-px bg-[#d8d8d4] ml-0 md:ml-5" />
                 </div>
               );

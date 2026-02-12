@@ -135,7 +135,7 @@ export default function CompareSnapshot() {
   const { title, rows } = comparisonData;
 
   const rowH = 48;
-  const headerH = 68;
+  const headerH = 100;
 
   return (
     <div
@@ -146,10 +146,8 @@ export default function CompareSnapshot() {
       }}
     >
       <h2
-        className="heading "
-        style={{
-          marginBottom: 20,
-        }}
+        className="heading md:mb-16 mb-10"
+    
       >
         {title}
       </h2>
@@ -163,7 +161,7 @@ export default function CompareSnapshot() {
               <div className="pl-5 rounded-l-xl">
                 {rows.map((row, i) => (
                   <div
-                    className="py-4 md:py-9 ml-2"
+                    className="py-8 md:py-9 px-2 text-[14px] md:text-[18px]"
                     key={i}
                     style={{
                       display: "flex",
@@ -235,7 +233,7 @@ export default function CompareSnapshot() {
               </div>
               {rows.map((row, i) => (
                 <div
-                  className="py-4 md:py-9 px-2 text-xs md:text-base"
+                  className="py-8 md:py-9 px-2 text-[14px] md:text-[18px]"
                   key={i}
                   style={{
                     display: "flex",
@@ -270,14 +268,14 @@ export default function CompareSnapshot() {
                 justifyContent: "center",
               }}
             >
-              <span className="md:text-3xl font-extrabold md:pr-5 pr-2">
+              <span className="md:text-[32px] text-base font-bold md:pr-5 pr-2">
                 Micro1
               </span>
             </div>
             <div className="md:pr-5 pr-2 bg-white rounded-r-xl">
               {rows.map((row, i) => (
                 <div
-                  className="py-4 md:py-9 mr-2 px-2 text-xs md:text-base"
+                  className="py-8 md:py-9 px-2 text-[14px] md:text-[18px]"
                   key={i}
                   style={{
                     display: "flex",

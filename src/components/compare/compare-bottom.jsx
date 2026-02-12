@@ -6,8 +6,8 @@ function CompareBottom() {
     <div className="flex flex-col lg:gap-10 gap-5 mx-auto container">
       <div className="flex flex-col md:gap-2">
         <h1 className="heading wordspacing">Bottom Line</h1>
-        <div className="flex flex-col md:gap-5 gap-2 ">
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:gap-5 gap-4 ">
+          <div className="flex flex-col gap-4">
             <p>
               Hyring’s ecosystem is built around modular recruiting tools that
               support high-volume and role-based hiring from screening to

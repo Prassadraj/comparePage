@@ -24,6 +24,7 @@ body {
   color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 /* =========================
    CLASH DISPLAY FONT SETUP
 ========================= */
@@ -46,7 +47,7 @@ body {
   font-display: swap;
 }
 
-/* Bold - 700 (if you have this file) */
+/* Bold - 700 */
 @font-face {
   font-family: "ClashDisplay";
   src: url("/fonts/clash/ClashDisplay-Bold.otf") format("opentype");
@@ -76,32 +77,9 @@ body {
 
 .sub-heading {
   font-family: "ClashDisplay", sans-serif;
-  font-weight: 700; /* Changed from 600 to 700 for bolder */
+  font-weight: 700;
   font-size: 20px; /* Mobile */
   line-height: 1.4;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (min-width: 768px) {
-  .heading {
-    font-size: 32px; /* Tablet & up */
-  }
-  .mainheading {
-    font-size: 50px; /* Tablet & up */
-  }
-
-  .sub-heading {
-    font-size: 28px;
-  }
-  .content {
-    font-size: 18px; /* Tablet & up */
-  }
-  .wordspacing {
-    word-spacing: 5px;
-  }
 }
 
 /* =========================
@@ -111,9 +89,11 @@ body {
 .greyBg {
   background: #edefec80;
 }
+
 .grey1 {
   color: #0e0f0c;
 }
+
 .grey3 {
   color: #6a6c6a;
 }
@@ -126,16 +106,52 @@ body {
   font-size: 16px;
 }
 
+.contentlg {
+  font-size: 18px !important;
+}
+
 .wordspacing {
   word-spacing: 5px;
 }
+
 .pri5 {
   background: #ebfae2;
 }
+
 .footer-green {
   background: #e9ebe6;
 }
 
 .star-green {
   background: #56b73e;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 32px;
+  }
+  
+  .mainheading {
+    font-size: 50px;
+  }
+
+  .sub-heading {
+    font-size: 28px;
+  }
+  
+  .content {
+    font-size: 18px;
+  }
+  
+  .contentlg {
+    font-size: 14px !important;
+  }
+  
+  .wordspacing {
+    word-spacing: 5px;
+  }
 }
