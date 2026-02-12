@@ -52,8 +52,8 @@ export default function FAQ() {
       <div className="w-full" style={{ maxWidth: 860 }}>
         {/* Title */}
         <h2
-          className=" heading font-black wordspacing text-center mb-8 md:mb-12"
-          style={{ color: "#1b2e1b", letterSpacing: "-0.5px", lineHeight: 1.1 }}
+          className=" heading font-black text-[34px] md:!text-[50px] wordspacing text-center mb-8 md:mb-12"
+          style={{ letterSpacing: "-0.5px", lineHeight: 1.1 }}
         >
           Frequently Asked Questions
         </h2>
@@ -98,17 +98,13 @@ export default function FAQ() {
                   }}
                 >
                   <div className="px-5 pt-4 pb-5 md:px-8 md:pt-5 md:pb-6">
-                    <p
-                      className="m-0 text-sm md:text-base leading-relaxed grey2"
-               
-                    >
+                    <p className="m-0 text-sm md:text-base leading-relaxed grey2">
                       {faq.answer}{" "}
                       <a
                         href="#"
                         className="font-semibold heading !text-base no-underline inline-flex items-center gap-0.5"
                         style={{
                           color: "#1b2e1b",
-                     
                         }}
                       >
                         Read more <span className="-rotate-45"> {Arrow}</span>

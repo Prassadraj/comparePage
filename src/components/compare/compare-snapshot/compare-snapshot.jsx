@@ -304,7 +304,7 @@ export default function CompareSnapshot() {
         </div>
       </div>
 
-      <p className="text-xs text-gray-500" style={{ marginTop: 16 }}>
+      <p className="text-[11px] grey3" style={{ marginTop: 16 }}>
         Ratings change over time. Review live pages for the latest updates.
       </p>
     </div>

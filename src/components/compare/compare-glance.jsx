@@ -14,7 +14,7 @@ export default function CompareGlance() {
       );
     }
     return (
-      <p className="text-center text-[11px] md:text-sm text-gray-700">
+      <p className="text-center text-[14px] md:text-[18px] grey1">
         {value}
       </p>
     );
@@ -29,10 +29,10 @@ export default function CompareGlance() {
           {/* Header */}
           <div
             className="grid grid-cols-[2fr_1fr_1fr] border-b border-gray-300 
-            px-3 py-2 md:px-6 md:py-4 
+            px-3 py-2 md:p-8 gap-2
             text-[11px] md:text-base font-semibold items-center"
           >
-            <div className="md:text-2xl text-base ">Feature / Capability</div>
+            <div className="md:text-2xl text-base font-semibold">Feature / Capability</div>
 
             <div className="flex justify-center">
               {" "}
@@ -53,7 +53,7 @@ export default function CompareGlance() {
                 />
               </svg>
             </div>
-            <div className="text-center font-bold text-base md:text-2xl ">Micro1</div>
+            <div className="text-center font-semibold text-base md:text-2xl ">Micro1</div>
           </div>
 
           {/* Rows */}
@@ -64,7 +64,7 @@ export default function CompareGlance() {
                 px-3 py-2 md:px-6 md:py-4 
                 border-b border-gray-200 last:border-b-0"
             >
-              <p className="font-medium text-gray-900 text-[11px] md:text-base leading-snug">
+              <p className="font-medium text-[14px] md:text-[18px] grey1 leading-snug">
                 {feature.name}
               </p>
 
@@ -75,7 +75,7 @@ export default function CompareGlance() {
           ))}
         </div>
 
-        <p className="text-[10px] md:text-xs text-gray-500 mt-3">{auditedAt}</p>
+        <p className="text-[14px] grey3 mt-3">{auditedAt}</p>
       </div>
     </section>
   );

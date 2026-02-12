@@ -79,7 +79,7 @@ export default function ClientTestimonials() {
   return (
     <div className="flex items-center justify-center mx-auto container ">
       <div className="w-full max-w-[880px]">
-        <h2 className="heading wordspacing text-2xl md:text-4xl font-black text-[#1b2e1b] text-center mb-5 md:mb-8 tracking-tight leading-tight">
+        <h2 className="heading wordspacing text-[34px] md:!text-[50px] font-black text-[#1b2e1b] text-center mb-5 md:mb-8 tracking-tight leading-tight">
           Client testimonials
         </h2>
 
@@ -162,7 +162,8 @@ export default function ClientTestimonials() {
                   <button
                     key={item.id}
                     onClick={() => switchTab(i)}
-                    className="flex-1 bg-transparent border-none pt-4 pb-2 cursor-pointer text-base font-semibold text-center transition-all duration-200"
+                    className="flex-1 bg-transparent border-none pt-4 pb-2
+                     cursor-pointer text-base md:!text-[20px] font-medium heading text-center transition-all duration-200"
                     style={{
                       borderTop: `3.5px solid ${
                         isActive ? "#1b2e1b" : "#c8cac2"

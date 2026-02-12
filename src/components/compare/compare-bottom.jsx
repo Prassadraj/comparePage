@@ -7,7 +7,7 @@ function CompareBottom() {
       <div className="flex flex-col md:gap-2">
         <h1 className="heading wordspacing">Bottom Line</h1>
         <div className="flex flex-col md:gap-5 gap-4 ">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 grey1 text-[16px] md:text-[18px]">
             <p>
               Hyring’s ecosystem is built around modular recruiting tools that
               support high-volume and role-based hiring from screening to
@@ -18,12 +18,12 @@ function CompareBottom() {
               and human data management for enterprise and research programs.
             </p>
           </div>
-          <div className=" flex flex-col md:gap-3 gap-4">
+          <div className=" flex flex-col md:gap-3 gap-4 grey1 text-[16px] md:text-[18px]">
             <div className="flex gap-2 items-start md:items-center p-2 md:p-4 bg-[#EBFAE2] border border-[#B0EA8B] rounded-sm">
               <Image
                 src="/asset/bottomLine-imgs/hyringLogo.png"
                 alt="hyringLogo"
-                className="w-16 md:w-6 aspect-auto"
+                className="w-24 md:w-6 sm:w-10  aspect-auto"
                 width={400}
                 height={400}
               />
@@ -32,11 +32,11 @@ function CompareBottom() {
                 integrity, and Fast hiring decisions
               </p>
             </div>
-            <div className="flex gap-2 items-start md:items-center p-4 bg-[#CACACA4D] border border-[#CACACA] rounded-sm">
+            <div className="flex gap-2 items-start md:items-center p-2  md:p-4 bg-[#CACACA4D] border border-[#CACACA] rounded-sm">
               <Image
                 src="/asset/bottomLine-imgs/microLogo.png"
                 alt="hyringLogo"
-                className="w-16 md:w-6  aspect-auto"
+                className="w-24 md:w-6 sm:w-10  aspect-auto"
                 width={400}
                 height={400}
               />

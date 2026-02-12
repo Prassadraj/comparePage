@@ -11,7 +11,7 @@ function FeatureComparison({ data }) {
         <h2 className="text-2xl wordspacing md:text-3xl font-semibold text-[#0E2A18] mb-3 heading">
           {title}
         </h2>
-        {intro && <p className="text-gray-700 max-w-4xl">{intro}</p>}
+        {intro && <p className="grey1 text-[16px] md:text-[18px]">{intro}</p>}
       </div>
 
       {/* Section */}
@@ -56,8 +56,8 @@ function FeatureComparison({ data }) {
           <Image src="/asset/win.svg" width={300} height={300}
           className="w-5 aspect-auto" />{winner.title}
         </span>
-        <p className="text-green-900 font-medium">
-          {winner.text} <span className="font-bold">{winner.highlight}</span>
+        <p className="grey1 font-normal  text-[18px] md:text-[20px]">
+          {winner.text} <span className="font-semibold">{winner.highlight}</span>
         </p>
       </div>
     </div>
@@ -83,7 +83,7 @@ function SideBlock({ data }) {
         <h4 className="text-lg font-semibold">{data.name}</h4>
       </div>
 
-      <p className="text-gray-700 leading-relaxed md:ml-11">{data.description}</p>
+      <p className="grey1 text-[16px] md:text-[18px] leading-relaxed md:ml-11">{data.description}</p>
     </div>
   );
 }

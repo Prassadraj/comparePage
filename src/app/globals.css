@@ -85,6 +85,10 @@ body {
 /* =========================
    UTILITIES
 ========================= */
+.linear {
+  background: linear-gradient(180deg, #d7f5c5 0%, #95ec61 100%);
+  opacity: 0.5;
+}
 
 .greyBg {
   background: #edefec80;
@@ -134,7 +138,7 @@ body {
   .heading {
     font-size: 32px;
   }
-  
+
   .mainheading {
     font-size: 50px;
   }
@@ -142,15 +146,15 @@ body {
   .sub-heading {
     font-size: 28px;
   }
-  
+
   .content {
     font-size: 18px;
   }
-  
+
   .contentlg {
     font-size: 14px !important;
   }
-  
+
   .wordspacing {
     word-spacing: 5px;
   }

@@ -4,8 +4,10 @@ function CompareOverview() {
   return (
     <div className="flex flex-col lg:gap-10 gap-5 container mx-auto">
       <div className="flex flex-col md:gap-2">
-        <h1 className="flex items-center text-3xl font-semibold heading">An Overview</h1>
-        <div className="flex flex-col gap-2 md:gap-5">
+        <h1 className="flex items-center text-3xl font-semibold heading">
+          An Overview
+        </h1>
+        <div className="flex flex-col gap-2 md:gap-5 text-[16px] md:text-[18px] grey1">
           <p>
             When recruiters are considering alternatives to Micro1, they may be
             looking for more targeted screening (video, phone, coding), more
@@ -25,7 +27,7 @@ function CompareOverview() {
         <h1 className="heading wordspacing">
           Why Hiring Teams Migrate From Micro1 To Hyring
         </h1>
-        <div className="flex flex-col gap-2 md:gap-4">
+        <div className="flex flex-col gap-2 md:gap-4 text-[16px] md:text-[18px] grey1">
           <p>
             Micro1 is marketed as a human data and intelligence platform (Data
             Engine, Zara, Intelligence) aimed at enterprises and labs.  

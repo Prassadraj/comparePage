@@ -13,21 +13,21 @@ const Card = ({ step, delay = 0, innerRef }) => (
     }}
   >
     <div
-      className="flex items-center justify-center rounded-xl shrink-0"
+      className="flex items-center justify-center rounded-xl shrink-0 linear"
       style={{
         width: 50,
         height: 50,
-        background: "linear-gradient(145deg, #E8F8DD 0%, #D6F2C6 100%)",
       }}
     >
       {step.icon}
     </div>
     <div className="flex-1 min-w-0">
-      <div style={{ fontSize: 15, fontWeight: 700, color: "#102713" }}>
+      <div className="font-semibold md:text-[18px] text-[16px]">
         {step.title}
       </div>
       <div
-        style={{ fontSize: 13, color: "#666", lineHeight: 1.45, marginTop: 1 }}
+        className="text-[14px] grey2"
+        style={{ lineHeight: 1.45, marginTop: 1 }}
       >
         {step.desc}
       </div>
@@ -143,10 +143,7 @@ export default function HiringWorkflow({
   if (!workflowSteps.length) return null;
 
   return (
-    <div
-      className="mx-auto container"
-     
-    >
+    <div className="mx-auto container">
       <style>{`
         @keyframes fadeUp { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
         @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
@@ -160,16 +157,9 @@ export default function HiringWorkflow({
           className="mb-5 px-1"
           style={{ animation: "fadeUp .5s ease both" }}
         >
-          {title && (
-            <h2
-              className="heading wordspacing !text-2xl"
-         
-            >
-              {title}
-            </h2>
-          )}
+          {title && <h2 className="heading wordspacing !text-2xl">{title}</h2>}
           {description && (
-            <p style={{ fontSize: 15, color: "#444", lineHeight: 1.5 }}>
+            <p className="text-[16px] md:text-[18px] grey1" style={{}}>
               {description}
             </p>
           )}

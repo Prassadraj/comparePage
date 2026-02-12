@@ -79,7 +79,7 @@ export default function Micro1Review({ data }) {
         <h1 className="heading wordspacing  !ext-lg md:!text-2xl text-[#1b2e1b]">
           Product Ecosystem
         </h1>
-        <p className="text-sm md:text-base text-[#333] leading-[1.6] mb-0 md:mb-7">
+        <p className="text-[16px] md:text-[18px] text-[#333] leading-[1.6] mb-0 md:mb-7">
           {data.description}
         </p>
 
@@ -127,12 +127,10 @@ export default function Micro1Review({ data }) {
                           className="absolute top-0 left-0 w-full star-green rounded-sm"
                           style={{ height: `${progress * 100}%` }}
                         />
-                        
                       )}
                     </div>
                     <div className="flex-1 py-2.5 md:py-4.5 text-center md:text-left">
                       <div className="flex gap-2">
-                        
                         {item.icon && (
                           <Image
                             src={item.icon}
@@ -153,7 +151,7 @@ export default function Micro1Review({ data }) {
                       )}
                     </div>
                   </div>
-             
+
                   <div className="h-px bg-[#d8d8d4] ml-0 md:ml-5" />
                 </div>
               );
@@ -185,7 +183,7 @@ export default function Micro1Review({ data }) {
           )}
         </div>
 
-        <p className="mt-4 md:mt-6 text-xs md:text-base text-[#444] leading-[1.6] text-center md:text-left">
+        <p className="mt-4 md:mt-6 text-[16px] md:text-[18px]  grey1 leading-[1.6] text-center md:text-left">
           {data.shortdescription}
         </p>
       </div>

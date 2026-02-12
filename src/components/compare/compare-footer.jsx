@@ -59,7 +59,7 @@ export default function HyringFooter() {
 
   const Heading = ({ children }) => (
     <h4
-      className="!text-xs heading md:!text-base font-bold uppercase mb-5 text-white"
+      className="!text-xs heading md:!text-base font-bold uppercase mb-5 !text-white"
       style={{  letterSpacing: "2.5px" }}
     >
       {children}
@@ -74,8 +74,8 @@ export default function HyringFooter() {
       {/* ── Top: Logo + Badges ── */}
       <div className="px-6 md:px-16 pt-10 mx-auto">
         <div
-          className="flex items-center gap-4 pb-6 border-b-2"
-          style={{ borderColor: "#56B73E" }}
+          className="flex items-center gap-4 pb-6 border-b-[.5px]"
+          style={{ borderColor: "white" }}
         >
           <span
             className="text-2xl md:text-3xl flex font-black tracking-widest"
@@ -172,7 +172,7 @@ export default function HyringFooter() {
         </div>
 
         {/* ── Links Grid (Mobile) ── */}
-        <div className="grid grid-cols-2 gap-8 md:hidden">
+        <div className="grid grid-cols-2 gap-8 md:hidden ">
           <div>
             <Heading>Quick Links</Heading>
             <div className="flex flex-col gap-2.5">
@@ -211,8 +211,8 @@ export default function HyringFooter() {
       {/* ── Bottom Bar ── */}
       <div className="px-6 md:px-16  mx-auto">
         <div
-          className="flex flex-col md:flex-row items-center justify-between gap-4 py-5 border-t"
-          style={{ borderColor: "#3e4e3e" }}
+          className="flex flex-col md:flex-row items-center justify-between gap-4 py-5 border-t-[.5px]"
+          style={{ borderColor: "white" }}
         >
           <div
             className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-sm"

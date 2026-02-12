@@ -18,7 +18,7 @@ function ComparePlatform({ data }) {
     <div className="w-full footer-green">
       <div className="flex flex-col justify-cente mx-auto container  
       items-center gap-6 md:gap-10 py-8 md:py-12">
-        <h1 className="heading text-center text-2xl md:text-4xl">
+        <h1 className="heading text-center text-[34px] md:!text-[50px] wordspacing">
           Compare with other platforms
         </h1>
 

@@ -84,7 +84,7 @@ export default function CostPricingStructure({ data }) {
                 {row.hyring.map((t, j) => (
                   <p
                     key={j}
-                    className={`text-sm leading-relaxed ${
+                    className={`grey1 text-[16px] md:text-[18px] leading-relaxed ${
                       j < row.hyring.length - 1 ? "mb-4" : ""
                     }`}
                   >
@@ -106,7 +106,7 @@ export default function CostPricingStructure({ data }) {
                 {row.micro1.map((t, j) => (
                   <p
                     key={j}
-                    className={`text-sm leading-relaxed ${
+                    className={`grey1 text-[16px] md:text-[18px] leading-relaxed ${
                       j < row.micro1.length - 1 ? "mb-4" : ""
                     }`}
                   >
@@ -138,7 +138,7 @@ export default function CostPricingStructure({ data }) {
                 <SnapshotIcons type="logo" />
               </div>
               {row.hyring.map((t, j) => (
-                <p key={j} className="text-sm leading-relaxed mb-3">
+                <p key={j} className="grey1 text-[16px] md:text-[18px]leading-relaxed mb-3">
                   {t}
                 </p>
               ))}
@@ -151,7 +151,7 @@ export default function CostPricingStructure({ data }) {
                 Micro1
               </div>
               {row.micro1.map((t, j) => (
-                <p key={j} className="text-sm leading-relaxed mb-3">
+                <p key={j} className="tgrey1 text-[16px] md:text-[18px]leading-relaxed mb-3">
                   {t}
                 </p>
               ))}
@@ -161,8 +161,8 @@ export default function CostPricingStructure({ data }) {
 
         {/* Footer */}
         <p
-          className="text-xs md:text-sm leading-relaxed mt-6 md:mt-8"
-          style={{ color: "#555" }}
+          className="grey1 text-[16px] md:text-[18px] leading-relaxed mt-6 md:mt-8"
+     
         >
           {footerParts[0]}
           <a href="#" className="text-blue-500 underline">

@@ -7,7 +7,7 @@ function BriefOne({ data }) {
       <div className="flex flex-col md:gap-2">
         <h1 className="heading !text-2xl ">{data.title}</h1>
         <div className="flex flex-col gap-2">
-          <p>{data.description}</p>
+          <p className="text-[16px] md:text-[18px] grey1">{data.description}</p>
         </div>
       </div>
 
@@ -29,7 +29,7 @@ function BriefOne({ data }) {
               {data.pros.map((item, index) => (
                 <li key={index} className="flex gap-3 items-start">
                   <BriefIcon type="check" />
-                  <span>{item}</span>
+                  <span className="grey1 text-[16px] md:text-[18px]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -48,7 +48,7 @@ function BriefOne({ data }) {
               {data.cons.map((item, index) => (
                 <li key={index} className="flex gap-3 items-start">
                   <BriefIcon type="cross" />
-                  <span>{item}</span>
+                  <span className="grey1 text-[16px] md:text-[18px]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -59,7 +59,7 @@ function BriefOne({ data }) {
           <h3 className="font-semibold text-[#BE7C2D] mb-2 md:text-xl">
             TAKEAWAY
           </h3>
-          <p className="text-gray-800 leading-relaxed">{data.takeaway}</p>
+          <p className="grey1 text-[16px] md:text-[18px] leading-relaxed">{data.takeaway}</p>
         </div>
       </div>
     </div>
