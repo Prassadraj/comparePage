@@ -132,7 +132,7 @@ export default function CostPricingStructure({ data }) {
 
               {/* Hyring badge */}
               <div
-                className="rounded-xl  px-4 text-center flex items-center justify-center font-bold text-base mb-3"
+                className="rounded-xl  px-4 py-2 text-center flex items-center justify-center font-bold text-base mb-3"
                 style={{ background: "#9CE56D" }}
               >
                 <SnapshotIcons type="logo" />
@@ -145,7 +145,7 @@ export default function CostPricingStructure({ data }) {
 
               {/* Micro1 badge */}
               <div
-                className="rounded-xl py-2.5 px-4 grey1 text-center font-bold text-xl   mt-5 mb-3"
+                className="rounded-xl py-4 px-4 grey1 text-center font-bold text-xl   mt-5 mb-3"
                 style={{ background: "#e2e4de" }}
               >
                 Micro1

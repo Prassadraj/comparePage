@@ -18,6 +18,15 @@ function FeatureComparison({ data }) {
       <h3 className="text-xl heading  !ext-lg md:!text-2xl font-semibold text-[#0E2A18] mb-3">
         {section.heading}
       </h3>
+      <div className=" md:hidden items-center justify-center rounded-2xl  h-full mb-5">
+          <Image
+            src="/compare/feature.png"
+            width={500}
+            alt="features"
+            height={600}
+            className="object-contain "
+          />
+        </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10  items-center mb-10">
         {/* Text */}
