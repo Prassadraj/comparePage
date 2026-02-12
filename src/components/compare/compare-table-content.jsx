@@ -19,7 +19,7 @@ function CompareTable() {
             {left.map((item, index) => (
               <p
                 key={index}
-                className="flex gap-2 w-full items-start text-base xl:text-xl"
+                className="flex gap-2 w-full items-start !text-base xl:text-xl"
               >
                 <span className="w-6 text-right shrink-0">{index + 1}.</span>
                 <span className="text-left content">{item}</span>
@@ -32,7 +32,7 @@ function CompareTable() {
             {right.map((item, index) => (
               <p
                 key={index}
-                className="flex gap-2 items-start text-base xl:text-xl"
+                className="flex gap-2 items-start !text-base xl:text-xl"
               >
                 <span className="w-6 text-right shrink-0">
                   {mid + index + 1}.

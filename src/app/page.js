@@ -35,37 +35,40 @@ export default function Home() {
 
   return (
     <>
-      <CompapreHero />
-      <div className="lg:p-20 p-5 flex flex-col gap-20 ">
-        <CompareTable />
-        <CompareOverview />
-        <CompareSnapshot />
-        <CompareEco />
-        <Micro1Review data={hyringReview} />
-        <HyringWorkflow
-          workflowSteps={workflowData}
-          title="Hiring Workflow"
-          description="Hyring follows a structured hiring pipeline. This workflow is optimized for speed, transparency, and recruiter control"
-        />
-        <BriefOne data={briefdataOne} />
-        <Micro1Review data={micro1Review} />
-        <HyringWorkflow
-          title="Vetting Workflow"
-          description="Micro1 follows a more programmatic, enterprise-oriented workflow. This workflow emphasises long-term expert quality and data reliability rather than large-scale, rapid hiring cycles."
-          workflowSteps={vettingData}
-        />
-        <BriefOne data={briefTwo} />
-        <CompareBottom />
-        <CompareGlance />
-        <FeatureComparison data={featureComparisonData} />
-        <FeatureComparison data={featureComparisonDataUiUx} />
-        <CostPricingStructure data={costPricingData} />
-        <CompareConclusion data={conclusionData} />
-        <ClientTestimonials />
-        <FAQ />
+      {" "}
+      <div className="gap-20 flex flex-col">
+        <CompapreHero />
+        <div className="px-4 md:px-8 lg:px-10 flex flex-col gap-20 ">
+          <CompareTable />
+          <CompareOverview />
+          <CompareSnapshot />
+          <CompareEco />
+          <Micro1Review data={hyringReview} />
+          <HyringWorkflow
+            workflowSteps={workflowData}
+            title="Hiring Workflow"
+            description="Hyring follows a structured hiring pipeline. This workflow is optimized for speed, transparency, and recruiter control"
+          />
+          <BriefOne data={briefdataOne} />
+          <Micro1Review data={micro1Review} />
+          <HyringWorkflow
+            title="Vetting Workflow"
+            description="Micro1 follows a more programmatic, enterprise-oriented workflow. This workflow emphasises long-term expert quality and data reliability rather than large-scale, rapid hiring cycles."
+            workflowSteps={vettingData}
+          />
+          <BriefOne data={briefTwo} />
+          <CompareBottom />
+          <CompareGlance />
+          <FeatureComparison data={featureComparisonData} />
+          <FeatureComparison data={featureComparisonDataUiUx} />
+          <CostPricingStructure data={costPricingData} />
+          <CompareConclusion data={conclusionData} />
+          <ClientTestimonials />
+          <FAQ />
+        </div>
         <ComparePlatform data={comparePlateformData} />
+        <HyringFooter />
       </div>
-      <HyringFooter />
     </>
   );
 }

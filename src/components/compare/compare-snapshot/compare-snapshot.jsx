@@ -56,7 +56,7 @@ function getLabelIcon(icon) {
           alt={icon}
           width={40}
           height={40}
-          className="w-3 md:w-4aspect-square"
+          className="w-3 md:w-4 aspect-square"
         />
       ) : (
         <div className="p-1 bg-[red] rounded-full flex justify-center items-center">
