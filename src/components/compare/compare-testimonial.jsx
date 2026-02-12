@@ -79,7 +79,7 @@ export default function ClientTestimonials() {
   return (
     <div className="flex items-center justify-center mx-auto container ">
       <div className="w-full max-w-[880px]">
-        <h2 className="heading text-2xl md:text-4xl font-black text-[#1b2e1b] text-center mb-5 md:mb-8 tracking-tight leading-tight">
+        <h2 className="heading wordspacing text-2xl md:text-4xl font-black text-[#1b2e1b] text-center mb-5 md:mb-8 tracking-tight leading-tight">
           Client testimonials
         </h2>
 
@@ -91,20 +91,20 @@ export default function ClientTestimonials() {
             <div className="flex-1 flex flex-col justify-between md:min-h-[280px] text-left">
               <div>
                 <div className="flex gap-1 mb-4 md:mb-6">
-                  <div className="w-5 h-9 md:h-7 bg-[#c2c4bd] rounded-bl-2xl rounded-br-sm" />
-                  <div className="w-5  h-9 md:h-7 bg-[#c2c4bd] rounded-bl-2xl rounded-br-sm" />
+                  <div className="w-5 h-9  bg-[#6A745D] rounded-bl-2xl rounded-br-sm" />
+                  <div className="w-5  h-9  bg-[#6A745D] rounded-bl-2xl rounded-br-sm" />
                 </div>
 
-                <p className="text-[#1b2e1b] text-lg md:text-2xl font-medium leading-snug tracking-tight m-0">
+                <p className="grey1 font-normal text-lg md:text-2xl font-medium leading-snug tracking-tight m-0">
                   {t.quote}
                 </p>
               </div>
 
               <div className="mt-6 md:mt-10">
-                <p className="text-[#1b2e1b] font-bold text-base md:text-lg m-0 mb-1">
+                <p className="grey1 font-medium text-base md:text-lg m-0 mb-1">
                   {t.category}
                 </p>
-                <p className="text-[#6b7a6b] text-sm md:text-base m-0 font-normal">
+                <p className="grey3 text-sm md:text-base m-0 font-normal">
                   {t.role}
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function ClientTestimonials() {
                 alt={t.role}
                 width={400}
                 height={500}
-                className="w-full md:w-56 h-full md:h-[270px] object-cover rounded-2xl md:rounded-3xl"
+                className="w-full md:w-56 h-full md:max-h-[270px] object-cover rounded-2xl md:rounded-lg"
               />
             </div>
           </div>

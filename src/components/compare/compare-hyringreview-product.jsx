@@ -73,17 +73,17 @@ export default function Micro1Review({ data }) {
   return (
     <div>
       <div className="mx-auto container">
-        <h1 className="heading text-2xl md:text-4xl font-black text-[#1b2e1b] mb-0 md:mb-5">
+        <h1 className="heading wordspacing text-2xl md:text-4xl font-black wordspacing text-[#1b2e1b] mb-0 md:mb-5">
           {data.title}
         </h1>
-        <h1 className="heading text-lg md:text-2xl text-[#1b2e1b]">
+        <h1 className="heading wordspacing  !ext-lg md:!text-2xl text-[#1b2e1b]">
           Product Ecosystem
         </h1>
         <p className="text-sm md:text-base text-[#333] leading-[1.6] mb-0 md:mb-7">
           {data.description}
         </p>
 
-        <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start justify-center">
           {isMobile && (
             <div
               className="w-full opacity-0 transition-opacity duration-200"
@@ -124,7 +124,7 @@ export default function Micro1Review({ data }) {
                     >
                       {isActive && (
                         <div
-                          className="absolute top-0 left-0 w-full bg-[#56B73E] rounded-sm"
+                          className="absolute top-0 left-0 w-full star-green rounded-sm"
                           style={{ height: `${progress * 100}%` }}
                         />
                       )}
@@ -137,15 +137,15 @@ export default function Micro1Review({ data }) {
                             alt={item.title}
                             width={400}
                             height={400}
-                            className="w-3 md:w-6 aspect-square"
+                            className="w-5 md:w-6 aspect-square"
                           />
                         )}
-                        <h3 className="text-base md:text-xl font-bold text-[#1b2e1b] m-0 leading-[1.3]">
+                        <h3 className="text-base md:text-xl font-medium text-[#1b2e1b] m-0 leading-[1.3]">
                           {item.title}
                         </h3>
                       </div>
                       {isActive && (
-                        <p className="text-xs md:text-base text-[#6b7a6b] mt-1 leading-[1.4] animate-[fadeIn_0.3s_ease]">
+                        <p className="text-xs text-left md:text-base text-[#6b7a6b] mt-1 leading-[1.4] animate-[fadeIn_0.3s_ease]">
                           {item.description}
                         </p>
                       )}
@@ -159,7 +159,8 @@ export default function Micro1Review({ data }) {
 
           {!isMobile && (
             <div
-              className="md:w-1/2 flex-shrink-0 object-contain opacity-0 transition-opacity duration-200"
+              className="md:w-1/2 flex-shrink-0
+              footer-green object-contain opacity-0 transition-opacity duration-200 rounded-2xl"
               style={{ opacity: imgFade ? 1 : 0 }}
             >
               <div

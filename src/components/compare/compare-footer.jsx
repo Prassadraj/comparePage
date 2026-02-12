@@ -59,7 +59,7 @@ export default function HyringFooter() {
 
   const Heading = ({ children }) => (
     <h4
-      className="text-xs text-base font-bold uppercase mb-5 text-white"
+      className="!text-xs heading md:!text-base font-bold uppercase mb-5 text-white"
       style={{  letterSpacing: "2.5px" }}
     >
       {children}
@@ -120,7 +120,7 @@ export default function HyringFooter() {
       {/* ── Links Grid (Desktop) ── */}
       <div className="px-6 md:px-16 pt-10 pb-10 mx-auto">
         <div
-          className="hidden md:flex gap-6"
+          className="hidden md:flex gap-6 "
           style={{ justifyContent: "space-between" }}
         >
           {/* Quick Links */}

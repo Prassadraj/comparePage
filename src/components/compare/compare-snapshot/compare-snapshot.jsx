@@ -56,7 +56,7 @@ function getLabelIcon(icon) {
           alt={icon}
           width={40}
           height={40}
-          className="w-4 aspect-square"
+          className="w-3 md:w-4aspect-square"
         />
       ) : (
         <div className="p-1 bg-[red] rounded-full flex justify-center items-center">
@@ -65,7 +65,7 @@ function getLabelIcon(icon) {
             alt={icon}
             width={40}
             height={40}
-            className="w-4 aspect-square"
+            className="w-2 md:w-4 aspect-square"
           />
         </div>
       )}
@@ -138,14 +138,15 @@ export default function CompareSnapshot() {
   const headerH = 68;
 
   return (
-    <div className="container mx-auto"
+    <div
+      className="container mx-auto"
       style={{
         padding: "24px 0",
         width: "100%",
       }}
     >
       <h2
-        className="heading"
+        className="heading "
         style={{
           marginBottom: 20,
         }}
@@ -158,39 +159,44 @@ export default function CompareSnapshot() {
           {/* LABELS */}
           <div style={{ borderRadius: "12px 0 0 12px" }}>
             <div style={{ height: headerH }} />
-            {rows.map((row, i) => (
-              <div
-                className="p-4 md:p-8"
-                key={i}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 6,
-
-                  height: rowH,
-                  background: "#EBFAE2",
-                  borderBottom:
-                    i < rows.length - 1 ? "1px solid rgba(0,0,0,0.08)" : "none",
-                  borderRadius:
-                    i === 0
-                      ? "12px 0 0 0"
-                      : i === rows.length - 1
-                      ? "0 0 0 12px"
-                      : "0",
-                }}
-              >
-                {row.icon && getLabelIcon(row.icon)}
-                <span
-                  className="font-bold text-xs md:text-base"
-                  style={{
-                    lineHeight: 1.3,
-                    color: "#0E0F0C",
-                  }}
-                >
-                  {row.label}
-                </span>
+            <div className="pri5 rounded-xl">
+              <div className="pl-5 rounded-l-xl">
+                {rows.map((row, i) => (
+                  <div
+                    className="py-4 md:py-9 ml-2"
+                    key={i}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 6,
+                      height: rowH,
+                      background: "#EBFAE2",
+                      borderBottom:
+                        i < rows.length - 1
+                          ? "1px solid rgba(0,0,0,0.08)"
+                          : "none",
+                      borderRadius:
+                        i === 0
+                          ? "12px 0 0 0"
+                          : i === rows.length - 1
+                          ? "0 0 0 12px"
+                          : "0",
+                    }}
+                  >
+                    {row.icon && getLabelIcon(row.icon)}
+                    <span
+                      className="font-bold text-xs md:text-base"
+                      style={{
+                        lineHeight: 1.3,
+                        color: "#0E0F0C",
+                      }}
+                    >
+                      {row.label}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
 
           {/* HYRING */}
@@ -221,7 +227,6 @@ export default function CompareSnapshot() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  borderBottom: "1px solid rgba(0,0,0,0.08)",
                   gap: 6,
                 }}
               >
@@ -229,13 +234,12 @@ export default function CompareSnapshot() {
               </div>
               {rows.map((row, i) => (
                 <div
-                  className="p-4 md:p-8"
+                  className="py-4 md:py-9 px-2"
                   key={i}
                   style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-
                     height: rowH,
                     fontSize: 14,
                     borderBottom:
@@ -265,33 +269,38 @@ export default function CompareSnapshot() {
                 justifyContent: "center",
               }}
             >
-              <span className="md:text-3xl font-extrabold">Micro1</span>
+              <span className="md:text-3xl font-extrabold md:pr-5 pr-2">
+                Micro1
+              </span>
             </div>
-            {rows.map((row, i) => (
-              <div
-                className="p-4 md:p-8"
-                key={i}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-
-                  height: rowH,
-                  fontSize: 14,
-                  background: "#fff",
-                  border: "1px solid rgba(0,0,0,0.08)",
-                  borderTop: i === 0 ? "1px solid rgba(0,0,0,0.08)" : "none",
-                  borderRadius:
-                    i === 0
-                      ? "12px 12px 0 0"
-                      : i === rows.length - 1
-                      ? "0 0 12px 12px"
-                      : "0",
-                }}
-              >
-                {renderValue(row.micro1, row.type, false)}
-              </div>
-            ))}
+            <div className="md:pr-5 pr-2 bg-white rounded-r-xl">
+              {rows.map((row, i) => (
+                <div
+                  className="py-4 md:py-9 mr-2 px-2"
+                  key={i}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: rowH,
+                    fontSize: 14,
+                    background: "#fff",
+                    borderBottom:
+                      i < rows.length - 1
+                        ? "1px solid rgba(0,0,0,0.08)"
+                        : "none",
+                    borderRadius:
+                      i === 0
+                        ? "0 12px 0 0"
+                        : i === rows.length - 1
+                        ? "0 0 12px 0"
+                        : "0",
+                  }}
+                >
+                  {renderValue(row.micro1, row.type, false)}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

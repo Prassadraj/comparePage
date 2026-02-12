@@ -8,12 +8,12 @@ function CompareTable() {
   const right = data?.slice(mid);
 
   return (
-    <div className="flex flex-col w-full greyBg lg:p-10 p-4 container mx-auto rounded-2xl border border-gray-300">
+    <div className="flex flex-col w-full greyBg lg:p-10 p-6 md:p-8 container mx-auto rounded-2xl border border-gray-300">
       <div className="flex flex-col gap-4">
         <h1 className="font-bold text-xl uppercase xl:text-2xl">
           Table of Contents
         </h1>
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col md:flex-row md:gap-8 gap-3">
           {/* Left */}
           <div className="flex flex-col gap-3 w-full md:flex-1">
             {left.map((item, index) => (
@@ -22,7 +22,7 @@ function CompareTable() {
                 className="flex gap-2 w-full items-start text-base xl:text-xl"
               >
                 <span className="w-6 text-right shrink-0">{index + 1}.</span>
-                <span className="text-left">{item}</span>
+                <span className="text-left content">{item}</span>
               </p>
             ))}
           </div>
@@ -37,7 +37,7 @@ function CompareTable() {
                 <span className="w-6 text-right shrink-0">
                   {mid + index + 1}.
                 </span>
-                <span className="text-left">{item}</span>
+                <span className="text-left content">{item}</span>
               </p>
             ))}
           </div>

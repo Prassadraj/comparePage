@@ -143,7 +143,10 @@ export default function HiringWorkflow({
   if (!workflowSteps.length) return null;
 
   return (
-    <div className="mx-auto container">
+    <div
+      className="mx-auto container"
+     
+    >
       <style>{`
         @keyframes fadeUp { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
         @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
@@ -159,12 +162,8 @@ export default function HiringWorkflow({
         >
           {title && (
             <h2
-              className="heading"
-              style={{
-                fontSize: 26,
-                fontWeight: 700,
-                color: "#102713",
-              }}
+              className="heading wordspacing !text-2xl"
+         
             >
               {title}
             </h2>

@@ -8,14 +8,14 @@ function FeatureComparison({ data }) {
     <div className="  mx-auto container ">
       {/* Header */}
       <div className="mb-6">
-        <h2 className="text-2xl md:text-3xl font-semibold text-[#0E2A18] mb-3 heading">
+        <h2 className="text-2xl wordspacing md:text-3xl font-semibold text-[#0E2A18] mb-3 heading">
           {title}
         </h2>
         {intro && <p className="text-gray-700 max-w-4xl">{intro}</p>}
       </div>
 
       {/* Section */}
-      <h3 className="text-xl font-semibold text-[#0E2A18] mb-3">
+      <h3 className="text-xl heading  !ext-lg md:!text-2xl font-semibold text-[#0E2A18] mb-3">
         {section.heading}
       </h3>
 
@@ -33,7 +33,7 @@ function FeatureComparison({ data }) {
             width={500}
             alt="features"
             height={600}
-            className="object-contain xl:w-[700px]"
+            className="object-contain max-w-[700px]"
           />
         </div>
       </div>
@@ -41,10 +41,11 @@ function FeatureComparison({ data }) {
       {/* Winner */}
       <div className="relative bg-[#EBFAE2] border border-green-300 rounded-xl p-6">
         <span
-          className="absolute  rounded-r-4xl -top-4 left-6 bg-white border border-green-300 px-4 
-        py-1 rounded-md text-sm font-bold flex items-center gap-2"
+          className="absolute  rounded-r-4xl -top-4 left-6 bg-white border border-green-300 px-2 
+        py-1 rounded-md text-sm font-bold flex items-center gap-1"
         >
-          🏆 {winner.title}
+          <Image src="/asset/win.svg" width={300} height={300}
+          className="w-5 aspect-auto" />{winner.title}
         </span>
         <p className="text-green-900 font-medium">
           {winner.text} <span className="font-bold">{winner.highlight}</span>
@@ -59,15 +60,21 @@ function SideBlock({ data }) {
   return (
     <div>
       <div className="flex items-center gap-3 mb-2">
-        <div
-          className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-semibold ${data.logoBg}`}
-        >
-          {data.logo}
-        </div>
+        <Image
+          src={
+            data.logo == "H"
+              ? "/asset/logo.png"
+              : "/asset/bottomLine-imgs/microLogo.png"
+          }
+          width={400}
+          height={400}
+          alt="Hyring logo"
+          className="md:w-10 md:h-10 h-8 w-8 shrink-0"
+        />
         <h4 className="text-lg font-semibold">{data.name}</h4>
       </div>
 
-      <p className="text-gray-700 leading-relaxed ml-11">{data.description}</p>
+      <p className="text-gray-700 leading-relaxed md:ml-11">{data.description}</p>
     </div>
   );
 }

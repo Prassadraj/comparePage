@@ -21,7 +21,7 @@ function SnapshotIcons({ type = "logo" }) {
       return (
         <svg
           height="42"
-          className="w-20 md:w-52"
+          className="w-full max-w-52"
           viewBox="0 0 149 42"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

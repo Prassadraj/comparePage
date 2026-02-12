@@ -7,10 +7,10 @@ function CompareConclusion({data}) {
     <div className=" mx-auto container">
       {/* Header */}
       <div className="mb-14 lg:mb-10">
-        <h2 className="text-2xl md:text-3xl font-semibold text-[#0E2A18] mb-3 heading">
+        <h2 className="text-2xl md:text-3xl wordspacing  font-semibold text-[#0E2A18] mb-3 heading">
           {data?.title}
         </h2>
-        <p className="text-gray-700 max-w-3xl">{data.subtitle}</p>
+        <p className="grey1 max-w-3xl">{data.subtitle}</p>
       </div>
 
       {/* Cards */}
@@ -23,7 +23,7 @@ function CompareConclusion({data}) {
       </div>
 
       {/* Disclaimer */}
-      <p className="text-sm text-gray-500">{data.disclaimer}</p>
+      <p className="text-sm grey3">{data.disclaimer}</p>
     </div>
   );
 }

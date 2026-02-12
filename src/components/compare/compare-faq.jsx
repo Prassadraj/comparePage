@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Arrow } from "../../../public/asset/arrow";
 
 const faqs = [
   {
@@ -51,7 +52,7 @@ export default function FAQ() {
       <div className="w-full" style={{ maxWidth: 860 }}>
         {/* Title */}
         <h2
-          className=" heading font-black text-center mb-8 md:mb-12"
+          className=" heading font-black wordspacing text-center mb-8 md:mb-12"
           style={{ color: "#1b2e1b", letterSpacing: "-0.5px", lineHeight: 1.1 }}
         >
           Frequently Asked Questions
@@ -73,17 +74,16 @@ export default function FAQ() {
                 {/* Question row */}
                 <button
                   onClick={() => toggle(faq.id)}
-                  className="w-full flex items-center justify-between cursor-pointer bg-transparent border-0 text-left px-5 py-4 md:px-8 md:py-5"
+                  className={`w-full flex items-center 
+                  justify-between cursor-pointer border-0 text-left px-5 py-4 md:px-8 md:py-5
+                  ${isOpen ? "bg-[#EDEFEC]" : "bg-transparent"}`}
                 >
-                  <span
-                    className="text-base md:text-lg font-bold pr-4"
-                    style={{ color: "#1b2e1b" }}
-                  >
+                  <span className="text-base md:text-lg font-semibold pr-4 grey1 ">
                     {faq.question}
                   </span>
                   <span
                     className="flex-shrink-0 w-8 h-8 md:w-9 md:h-9 rounded-lg flex items-center justify-center text-lg md:text-xl font-medium select-none"
-                    style={{ backgroundColor: "#c8cec0", color: "#1b2e1b" }}
+                    style={{ backgroundColor: "#CFD4D0", color: "#1b2e1b" }}
                   >
                     {isOpen ? "−" : "+"}
                   </span>
@@ -97,26 +97,21 @@ export default function FAQ() {
                     opacity: isOpen ? 1 : 0,
                   }}
                 >
-                  <div
-                    className="mx-5 md:mx-8"
-                    style={{ height: 1, backgroundColor: "#c8cec0" }}
-                  />
                   <div className="px-5 pt-4 pb-5 md:px-8 md:pt-5 md:pb-6">
                     <p
-                      className="m-0 text-sm md:text-base leading-relaxed"
-                      style={{ color: "#3a4a3a" }}
+                      className="m-0 text-sm md:text-base leading-relaxed grey2"
+               
                     >
                       {faq.answer}{" "}
                       <a
                         href="#"
-                        className="font-bold no-underline inline-flex items-center gap-0.5"
+                        className="font-semibold heading !text-base no-underline inline-flex items-center gap-0.5"
                         style={{
                           color: "#1b2e1b",
-                          textDecoration: "underline",
-                          textUnderlineOffset: 2,
+                     
                         }}
                       >
-                        Read more ↗
+                        Read more <span className="-rotate-45"> {Arrow}</span>
                       </a>
                     </p>
                   </div>
@@ -130,7 +125,7 @@ export default function FAQ() {
         <div className="text-center mt-8 md:mt-10">
           <a
             href="#"
-            className="font-bold text-base md:text-lg inline-block"
+            className="!font-semibold  heading !text-base md:!text-lg inline-block"
             style={{
               color: "#1b2e1b",
               textDecoration: "underline",

@@ -33,7 +33,6 @@ export const Tabledata = [
   "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
   "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
   "Lorem ipsum dolor sit amet amet amet, consectetur adipiscing elit",
-  
 ];
 
 export const briefDataOne = {
@@ -275,8 +274,8 @@ export const comparisonData = {
 
     {
       label: "Website link",
-      hyring: "https://hyring.com",
-      micro1: "https://micro1.ai",
+      hyring: "hyring.com",
+      micro1: "micro1.ai",
       type: "link",
     },
   ],
@@ -417,7 +416,7 @@ export const hyringReview = {
       description:
         "Asynchronous and live two-way video interviews with dynamic follow-ups",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&h=500&fit=crop",
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&h=500&fit=crop",
     },
     {
       id: 1,
@@ -1044,7 +1043,7 @@ export const vettingData = [
   },
 ];
 
-// comparePlateform 
+// comparePlateform
 
 export const comparePlateformData = [
   { img: "/asset/otherPlatform-imgs/frame1.svg" },

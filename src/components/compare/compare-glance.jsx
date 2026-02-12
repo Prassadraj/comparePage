@@ -23,7 +23,7 @@ export default function CompareGlance() {
   return (
     <section className="bg-gray-100 mx-auto container">
       <div className=" ">
-        <h2 className="heading mb-4 md:mb-6">{title}</h2>
+        <h2 className="heading mb-4 md:mb-6 wordspacing">{title}</h2>
 
         <div className="bg-white rounded-2xl overflow-hidden">
           {/* Header */}
@@ -32,7 +32,7 @@ export default function CompareGlance() {
             px-3 py-2 md:px-6 md:py-4 
             text-[11px] md:text-base font-semibold items-center"
           >
-            <div>Feature / Capability</div>
+            <div className="md:text-2xl text-base ">Feature / Capability</div>
 
             <div className="flex justify-center">
               {" "}
@@ -53,7 +53,7 @@ export default function CompareGlance() {
                 />
               </svg>
             </div>
-            <div className="text-center font-bold md:text-2xl ">Micro1</div>
+            <div className="text-center font-bold text-base md:text-2xl ">Micro1</div>
           </div>
 
           {/* Rows */}

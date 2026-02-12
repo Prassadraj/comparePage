@@ -32,9 +32,9 @@ function CompareConclusionCard({ data, accent }) {
               ) : (
                 <SnapshotIcons type="wrong" />
               )}
-              <h4 className="font-semibold">{section.title}</h4>
+              <h4 className="font-semibold grey1">{section.title}</h4>
             </div>
-            <p className="text-gray-700 leading-relaxed ml-9">{section.text}</p>
+            <p className="grey1 leading-relaxed ml-9">{section.text}</p>
           </div>
         ))}
       </div>
