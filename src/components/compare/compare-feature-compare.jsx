@@ -53,7 +53,7 @@ function FeatureComparison({ data }) {
           className="absolute  rounded-r-4xl -top-4 left-6 bg-white border border-green-300 px-2 
         py-1 rounded-md text-sm font-bold flex items-center gap-1"
         >
-          <Image src="/asset/win.svg" width={300} height={300}
+          <Image src="/asset/win.svg" width={300} height={300} alt={winner.title}
           className="w-5 aspect-auto" />{winner.title}
         </span>
         <p className="grey1 font-normal  text-[18px] md:text-[20px]">

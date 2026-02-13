@@ -79,17 +79,23 @@ export default function Micro1Review({ data }) {
         <h1 className="heading wordspacing  !ext-lg md:!text-2xl text-[#1b2e1b]">
           Product Ecosystem
         </h1>
-        <p className="text-[16px] md:text-[18px] text-[#333] leading-[1.6] mb-0 md:mb-7">
+        <p className="text-[16px] md:text-[18px] text-[#333] leading-[1.6] mb-4 md:mb-7">
           {data.description}
         </p>
 
-        <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start justify-center">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center">
           {isMobile && (
             <div
               className="w-full opacity-0 transition-opacity duration-200"
               style={{ opacity: imgFade ? 1 : 0 }}
             >
-              <div className="bg-[#e2e4de] rounded-2xl p-3.5">
+              <div
+                className=" footer-green rounded-2xl p-6"
+                style={{
+                  backgroundImage:
+                    "url('/asset/productEcosystem-imgs/bgg.png')",
+                }}
+              >
                 <Image
                   src={currentItem.image}
                   alt={currentItem.title}
@@ -116,7 +122,8 @@ export default function Micro1Review({ data }) {
                     }`}
                   >
                     <div
-                      className="w-1 flex-shrink-0 mr-3 md:mr-4 self-stretch rounded-sm relative overflow-hidden"
+                      className="w-1 flex-shrink-0 mr-3 md:mr-4 
+                      self-stretch rounded-sm relative overflow-hidden"
                       style={{
                         backgroundColor: isActive ? "#e0e0dc" : "transparent",
                         minHeight: isMobile ? 50 : 60,
@@ -140,12 +147,12 @@ export default function Micro1Review({ data }) {
                             className="w-5 md:w-6 aspect-square"
                           />
                         )}
-                        <h3 className="text-base md:text-xl font-medium text-[#1b2e1b] m-0 leading-[1.3]">
+                        <h3 className="text-base lg:text-xl font-medium text-[#1b2e1b] m-0 leading-[1.3]">
                           {item.title}
                         </h3>
                       </div>
                       {isActive && (
-                        <p className="text-xs text-left md:text-base text-[#6b7a6b] mt-1 leading-[1.4] animate-[fadeIn_0.3s_ease]">
+                        <p className="text-xs text-left lg:text-base text-[#6b7a6b] mt-1 leading-[1.4] animate-[fadeIn_0.3s_ease]">
                           {item.description}
                         </p>
                       )}
@@ -160,24 +167,43 @@ export default function Micro1Review({ data }) {
 
           {!isMobile && (
             <div
-              className="md:w-1/2 flex-shrink-0
-              footer-green object-contain opacity-0 transition-opacity duration-200 rounded-2xl"
-              style={{ opacity: imgFade ? 1 : 0 }}
+              className="md:w-1/2 flex-shrink-0 w-full max-h-[375px] max-w-[641px] opacity-0 transition-opacity duration-200 relative aspect-[641/375]"
+              style={{
+                opacity: imgFade ? 1 : 0,
+              }}
             >
-              <div
-                className="p-10 bg-cover bg-center bg-no-repeat rounded-[20px]"
-                style={{
-                  backgroundImage:
-                    "url('/asset/productEcosystem-imgs/bgg.png')",
-                }}
-              >
-                <Image
-                  src={currentItem.image}
-                  alt={currentItem.title}
-                  width={400}
-                  height={300}
-                  className="w-full h-[300px] object-cover rounded-xl block"
+              {/* Background container with background image */}
+              <div className="absolute footer-green inset-0 bg-cover bg-center bg-no-repeat rounded-[18px] overflow-hidden">
+                {/* Luminosity overlay image */}
+                <div
+                  className="absolute bg-cover bg-center inset-0"
+                  style={{
+                    backgroundImage:
+                      "url('/asset/productEcosystem-imgs/bgg.png')",
+                    mixBlendMode: "luminosity",
+                    transform: "translateX(-1.9%)",
+                    width: "103.9%",
+                  }}
                 />
+
+                {/* Main content image */}
+                <div
+                  className="absolute"
+                  style={{
+                    width: "85.3%",
+                    height: "77.1%",
+                    left: "7.3%",
+                    top: "11.5%",
+                  }}
+                >
+                  <Image
+                    src={currentItem.image}
+                    alt={currentItem.title}
+                    width={547}
+                    height={289}
+                    className="w-full h-full object-cover rounded-[9px] block"
+                  />
+                </div>
               </div>
             </div>
           )}

@@ -4,39 +4,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Arrow } from "../../../public/asset/arrow";
 
-const data = [
-  {
-    id: 1,
-    quote:
-      "We cut phone screens by 60% after rolling out structured AI screening. Recruiters could focus on higher-value interviews.",
-    category: "Mid-market",
-    role: "Tech recruiter",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face",
-    tab: "Mid-Market",
-  },
-  {
-    id: 2,
-    quote:
-      "As a lean team, we needed to move fast without sacrificing candidate quality. AI screening helped us hire 3x faster with half the effort.",
-    category: "Lean Startup",
-    role: "Head of People",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop&crop=face",
-    tab: "Lean Startup",
-  },
-  {
-    id: 3,
-    quote:
-      "Our enterprise hiring pipeline was drowning in volume. Structured AI screening gave us consistency and speed at scale.",
-    category: "Company Name",
-    role: "VP of Talent Acquisition",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
-    tab: "Company Name",
-  },
-];
-
 function useWidth() {
   const [w, setW] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1024
@@ -49,7 +16,8 @@ function useWidth() {
   return w;
 }
 
-export default function ClientTestimonials() {
+export default function ClientTestimonials({ data: testimonialData }) {
+  const data = testimonialData.testimonials;
   const [active, setActive] = useState(0);
   const [fade, setFade] = useState(true);
   const w = useWidth();
@@ -80,7 +48,7 @@ export default function ClientTestimonials() {
     <div className="flex items-center justify-center mx-auto container ">
       <div className="w-full max-w-[880px]">
         <h2 className="heading wordspacing text-[34px] md:!text-[50px] font-black text-[#1b2e1b] text-center mb-5 md:mb-8 tracking-tight leading-tight">
-          Client testimonials
+          {testimonialData.title}
         </h2>
 
         <div

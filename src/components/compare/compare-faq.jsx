@@ -3,46 +3,8 @@
 import { useState } from "react";
 import { Arrow } from "../../../public/asset/arrow";
 
-const faqs = [
-  {
-    id: 1,
-    question: "Do I need to purchase the AI Coding Interviewer separately?",
-    answer:
-      "No. The AI Coding Interviewer is included with the AI Video Interviewer; all plans come with access to it by default. There are no hidden or additional charges.",
-  },
-  {
-    id: 2,
-    question: "Can I upgrade or downgrade?",
-    answer:
-      "Yes. You can upgrade or downgrade your plan at any time from your account settings. Changes take effect at the start of your next billing cycle.",
-  },
-  {
-    id: 3,
-    question: "Is interview transcription available?",
-    answer:
-      "Yes. All interviews are automatically transcribed in real-time. You can access, search, and export transcripts from your dashboard.",
-  },
-  {
-    id: 4,
-    question: "Where to use the assessments links?",
-    answer:
-      "You can share assessment links directly with candidates via email, your ATS, job postings, or any communication channel you prefer.",
-  },
-  {
-    id: 5,
-    question: "Conduct multiple assessments simultaneously?",
-    answer:
-      "Absolutely. There is no limit to the number of concurrent assessments. Multiple candidates can take assessments at the same time without any issues.",
-  },
-  {
-    id: 6,
-    question: "Can I share response & reports internally to my team?",
-    answer:
-      "Yes. You can invite team members and share candidate responses, reports, and evaluations internally through the platform's collaboration features.",
-  },
-];
-
-export default function FAQ() {
+export default function FAQ({ data: faqData }) {
+  const faqs = faqData.faqs;
   const [openId, setOpenId] = useState(1);
 
   const toggle = (id) => setOpenId(openId === id ? null : id);
@@ -55,7 +17,7 @@ export default function FAQ() {
           className=" heading font-black text-[34px] md:!text-[50px] wordspacing text-center mb-8 md:mb-12"
           style={{ letterSpacing: "-0.5px", lineHeight: 1.1 }}
         >
-          Frequently Asked Questions
+          {faqData.title}
         </h2>
 
         {/* FAQ Items */}
@@ -101,7 +63,7 @@ export default function FAQ() {
                     <p className="m-0 text-sm md:text-base leading-relaxed grey2">
                       {faq.answer}{" "}
                       <a
-                        href="#"
+                        href={faqData.viewMoreLink}
                         className="font-semibold heading !text-base no-underline inline-flex items-center gap-0.5"
                         style={{
                           color: "#1b2e1b",
@@ -120,7 +82,7 @@ export default function FAQ() {
         {/* View More */}
         <div className="text-center mt-8 md:mt-10">
           <a
-            href="#"
+            href={faqData.viewMoreLink}
             className="!font-semibold  heading !text-base md:!text-lg inline-block"
             style={{
               color: "#1b2e1b",

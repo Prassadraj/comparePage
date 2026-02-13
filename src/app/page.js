@@ -21,12 +21,17 @@ import {
   featureComparisonDataUiUx,
   hyringReview,
   micro1Review,
+  micro1BriefData,
+  featureComparisonData,
+  costPricingData,
+  workflowData,
+  vettingData,
+  compareHeroData,
+  compareOverviewData,
+  compareEcosystemData,
+  compareTestimonialData,
+  compareFaqData,
 } from "@/components/compare/data";
-import { micro1BriefData } from "@/components/compare/data";
-import { featureComparisonData } from "@/components/compare/data";
-import { costPricingData } from "@/components/compare/data";
-import { workflowData } from "@/components/compare/data";
-import { vettingData } from "@/components/compare/data";
 import ComparePlatform from "@/components/compare/compare-platform";
 
 export default function Home() {
@@ -37,12 +42,12 @@ export default function Home() {
     <>
       {" "}
       <div className="gap-20 flex flex-col">
-        <CompapreHero />
+        <CompapreHero data={compareHeroData} />
         <div className="px-4 md:px-8 lg:px-10 flex flex-col gap-20 ">
           <CompareTable />
-          <CompareOverview />
+          <CompareOverview data={compareOverviewData} />
           <CompareSnapshot />
-          <CompareEco />
+          <CompareEco data={compareEcosystemData} />
           <Micro1Review data={hyringReview} />
           <HyringWorkflow
             workflowSteps={workflowData}
@@ -63,8 +68,8 @@ export default function Home() {
           <FeatureComparison data={featureComparisonDataUiUx} />
           <CostPricingStructure data={costPricingData} />
           <CompareConclusion data={conclusionData} />
-          <ClientTestimonials />
-          <FAQ />
+          <ClientTestimonials data={compareTestimonialData} />
+          <FAQ data={compareFaqData} />
         </div>
         <ComparePlatform data={comparePlateformData} />
         <HyringFooter />

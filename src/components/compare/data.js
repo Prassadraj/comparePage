@@ -1050,3 +1050,118 @@ export const comparePlateformData = [
   { img: "/asset/otherPlatform-imgs/frame2.svg" },
   { img: "/asset/otherPlatform-imgs/frame3.svg" },
 ];
+
+// ===========================
+// OVERVIEW SECTION
+// ===========================
+export const compareOverviewData = {
+  section1: {
+    title: "An Overview",
+    paragraphs: [
+      "When recruiters are considering alternatives to Micro1, they're usually looking for something tighter and more specialized around recruiting. Micro1 is known as a broad human data and intelligence platform. It's strong at sourcing, but its product area extends well beyond hiring. When teams need tools optimized for hiring workflows—like automated screening, structured interviews, or pipeline management—Micro1's broader scope can feel like overkill.",
+      "Hyring's product area is recruitment workflows. It's built for recruiters, HR teams, and hiring managers who want to move candidates efficiently from first screen to offer. Where Micro1 offers human data at scale, Hyring focuses on AI-driven interviewing and structured screening within the hiring process.",
+    ],
+  },
+  section2: {
+    title: "Why Hiring Teams Migrate From Micro1 To Hyring",
+    paragraphs: [
+      "Micro1 is marketed as a human data and intelligence platform, which means its strongest capabilities lie in sourcing candidates and accessing talent pools. For companies that need robust sourcing infrastructure—especially at enterprise scale—Micro1 can be a powerful tool.",
+      "This makes it extremely strong at sourcing. But once candidates enter your pipeline, the product wasn't designed specifically for hiring workflows—things like automated phone screens, structured AI interviews, or hiring manager handoffs. For teams focused on moving candidates quickly through interviews and decisions, Micro1's feature set isn't always aligned.",
+      "This mismatch in requirements is often why companies migrate. Teams that started with Micro1 for sourcing begin to need interviewing and screening tools that feel purpose-built for recruiting. Hyring is designed to handle the middle and late stages of the hiring funnel—where structured screening and decision-making matter most.",
+    ],
+  },
+};
+
+// ===========================
+// ECOSYSTEM SECTION
+// ===========================
+export const compareEcosystemData = {
+  title: "Ecosystem: Products & Hiring Workflow",
+  description:
+    "This section outlines how Hyring and Micro1 structure their product ecosystems and how candidates move through each platform's hiring and vetting workflow, based on publicly available product information from their websites.",
+};
+
+// ===========================
+// TESTIMONIALS SECTION
+// ===========================
+export const compareTestimonialData = {
+  title: "Client testimonials",
+  testimonials: [
+    {
+      id: 1,
+      quote:
+        "We cut phone screens by 60% after rolling out structured AI screening. Recruiters could focus on higher-value interviews.",
+      category: "Mid-market",
+      role: "Tech recruiter",
+      image:
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face",
+      tab: "Mid-Market",
+    },
+    {
+      id: 2,
+      quote:
+        "As a lean team, we needed to move fast without sacrificing candidate quality. AI screening helped us hire 3x faster with half the effort.",
+      category: "Lean Startup",
+      role: "Head of People",
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop&crop=face",
+      tab: "Lean Startup",
+    },
+    {
+      id: 3,
+      quote:
+        "Our enterprise hiring pipeline was drowning in volume. Structured AI screening gave us consistency and speed at scale.",
+      category: "Company Name",
+      role: "VP of Talent Acquisition",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
+      tab: "Company Name",
+    },
+  ],
+};
+
+// ===========================
+// FAQ SECTION
+// ===========================
+export const compareFaqData = {
+  title: "Frequently Asked Questions",
+  faqs: [
+    {
+      id: 1,
+      question: "Do I need to purchase the AI Coding Interviewer separately?",
+      answer:
+        "No. The AI Coding Interviewer is included with the AI Video Interviewer at no additional charge. When you subscribe to Hyring, you get both products as part of the same platform.",
+    },
+    {
+      id: 2,
+      question: "Can I upgrade or downgrade?",
+      answer:
+        "Yes. You can upgrade or downgrade your plan at any time. Changes take effect immediately, and billing adjusts on your next cycle.",
+    },
+    {
+      id: 3,
+      question: "Is interview transcription available?",
+      answer:
+        "Yes. All interviews are automatically transcribed in real-time. Transcripts are available immediately after each session and can be reviewed or shared with your team.",
+    },
+    {
+      id: 4,
+      question: "Where to use the assessments links?",
+      answer:
+        "You can share assessment links directly with candidates via email, ATS integrations, or any communication channel. Candidates click the link and begin the assessment immediately—no login required.",
+    },
+    {
+      id: 5,
+      question: "Conduct multiple assessments simultaneously?",
+      answer:
+        "Absolutely. There is no limit to the number of concurrent assessments. You can have hundreds of candidates taking different interviews at the same time.",
+    },
+    {
+      id: 6,
+      question: "Can I share response & reports internally to my team?",
+      answer:
+        "Yes. You can invite team members and share candidate responses, interview recordings, and AI-generated reports internally. All data is accessible within your workspace for collaboration and decision-making.",
+    },
+  ],
+  viewMoreLink: "#",
+};

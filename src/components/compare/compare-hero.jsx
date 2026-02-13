@@ -2,38 +2,50 @@ import Image from "next/image";
 import React from "react";
 import { circleTick } from "../../../public/asset/arrow";
 
-function CompapreHero() {
+function CompapreHero({ data }) {
+  const { meta, authors, frameImage } = data;
+
   return (
-    <div className="mx-auto bg-[#102713] w-full">
+    <div className="mx-auto bg-[#102713] w-full relative">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <Image
+          src="/asset/dots.png"
+          width={900}
+          height={900}
+          alt="Popup"
+          className="w-full h-full object-cover -translate-x-8"
+        />
+      </div>
       <div className="flex gap-5 flex-col items-center pt-32">
         <div className="flex flex-col items-center">
-          <p className="text-base uppercase icon-grey1">Micro1 VS HyrinG</p>
+          <p className="text-base uppercase icon-grey1">{meta.label}</p>
 
           {/* 2 */}
           <div className="flex flex-col items-center px-2">
             <div className="flex items-center mainheading gap-1">
-              <h1 className="text-center text-[#9CE56D]">Micro1</h1>
+              <h1 className="text-center text-[#9CE56D]">{meta.titleLeft}</h1>
               <span className="mx-2 text-white">vs</span>
               <h1 className="text-center text-[#9CE56D]">
-                Hyring<span className="text-white">:</span>
+                {meta.titleRight}
+                <span className="text-white">:</span>
               </h1>
             </div>
             <div className="-mt-2 md:-mt-4">
               <h2 className="text-white text-center mainheading text-3xl md:text-3xl lg:text-6xl">
-                A Detailed Comparison
+                {meta.subtitle}
               </h2>
             </div>
           </div>
 
           <div className="text-white flex flex-col md:flex-row md:gap-4 items-center justify-evenly mt-3">
             <p className="font-bold">
-              <span className="icon-grey1 font-normal">Written on:</span> 18 Aug
-              2025
+              <span className="icon-grey1 font-normal">Written on:</span>{" "}
+              {meta.writtenOn}
             </p>
             <p className="hidden md:block h-4 w-[1px] bg-[#EDEFEC]"></p>
             <p className="font-bold">
-              <span className="icon-grey1 font-normal">Last updated:</span> 21
-              Aug 2025
+              <span className="icon-grey1 font-normal">Last updated:</span>{" "}
+              {meta.lastUpdated}
             </p>
           </div>
         </div>
@@ -43,7 +55,7 @@ function CompapreHero() {
           {/* Written by */}
           <div className="flex gap-3 items-start">
             <Image
-              src="/asset/logo.png"
+              src={authors.writtenBy.image}
               width={400}
               height={400}
               alt="Hyring logo"
@@ -52,16 +64,18 @@ function CompapreHero() {
 
             <div className="flex flex-col justify-start gap-1">
               <p className="icon-grey1 text-sm leading-tight font-semibold">
-                Written by
+                {authors.writtenBy.role}
               </p>
-              <p className="font-medium leading-tight">Team Hyring</p>
+              <p className="font-medium leading-tight">
+                {authors.writtenBy.name}
+              </p>
             </div>
           </div>
 
           {/* Fact checked by */}
           <div className="flex gap-3 items-start">
             <Image
-              src="/asset/main.png"
+              src={authors.factCheckedBy.image}
               width={400}
               height={400}
               alt="Reviewer"
@@ -72,10 +86,12 @@ function CompapreHero() {
               <div className="flex gap-1">
                 <span className="text-sm leading-none">{circleTick}</span>
                 <p className="icon-grey1 text-sm leading-tight">
-                  Fact Checked by
+                  {authors.factCheckedBy.role}
                 </p>
               </div>
-              <p className="font-semibold leading-tight">Adithyan RK</p>
+              <p className="font-semibold leading-tight">
+                {authors.factCheckedBy.name}
+              </p>
             </div>
           </div>
         </div>
@@ -85,7 +101,7 @@ function CompapreHero() {
         <div className="px-5 md:px-12 w-full">
           <div className="w-full max-w-[834px] relative mx-auto xl:mt-4">
             <Image
-              src="/compare/frame.png"
+              src={frameImage}
               width={834}
               height={800}
               alt="Image"
