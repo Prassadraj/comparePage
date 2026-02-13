@@ -16,14 +16,16 @@ function ComparePlatform({ data }) {
 
   return (
     <div className="w-full footer-green">
-      <div className="flex flex-col justify-cente mx-auto container  
-      items-center gap-6 md:gap-10 py-8 md:py-12">
+      <div
+        className="flex flex-col justify-cente mx-auto container  
+      items-center gap-6 md:gap-10 py-8 md:py-12"
+      >
         <h1 className="heading text-center text-[34px] md:!text-[50px] wordspacing">
           Compare with other platforms
         </h1>
 
         {/* Mobile View */}
-        <div className="md:hidden relative w-full px-5">
+        <div className="md:hidden relative w-full px-5 ">
           <div className="relative">
             <Image
               src={data[currentIndex].img}
@@ -95,16 +97,20 @@ function ComparePlatform({ data }) {
         </div>
 
         {/* Desktop View */}
-        <div className="hidden md:flex flex-row gap-10 w-full px-10 justify-center items-center">
+        <div className="hidden md:flex flex-wrap gap-10 w-full px-6 lg:px-10 justify-center items-center">
           {data.map((val, i) => (
-            <Image
+            <div
               key={i}
-              src={val.img}
-              width={400}
-              height={400}
-              className="w-1/3 h-auto"
-              alt="platform"
-            />
+              className="w-full sm:w-[80%] md:w-[30%] flex justify-center"
+            >
+              <Image
+                src={val.img}
+                width={400}
+                height={400}
+                className="w-full max-w-[414px] h-auto"
+                alt="platform"
+              />
+            </div>
           ))}
         </div>
       </div>

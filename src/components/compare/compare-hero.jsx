@@ -82,7 +82,7 @@ function CompapreHero() {
 
         {/* ---- */}
 
-        <div className="px-5 w-full">
+        <div className="px-5 md:px-12 w-full">
           <div className="w-full max-w-[834px] relative mx-auto xl:mt-4">
             <Image
               src="/compare/frame.png"

@@ -36,7 +36,7 @@ function CompareBottom() {
               <Image
                 src="/asset/bottomLine-imgs/microLogo.png"
                 alt="hyringLogo"
-                className="w-24 md:w-6 sm:w-10  aspect-auto"
+                className="w-24 md:w-6 sm:w-8  aspect-auto"
                 width={400}
                 height={400}
               />
