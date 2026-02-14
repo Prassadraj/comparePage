@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Arrow } from "../../../public/asset/arrow";
+import { Arrow } from "../../../public/newcompare/asset/arrow";
 
 export default function FAQ({ data: faqData }) {
   const faqs = faqData.faqs;

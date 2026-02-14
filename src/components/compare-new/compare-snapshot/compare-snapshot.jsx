@@ -39,9 +39,9 @@ const CrossIcon = () => (
 
 function getLabelIcon(icon) {
   const iconMap = {
-    trustpilot: "/asset/compareSnapshot-imgs/star.svg",
-    capterra: "/asset/compareSnapshot-imgs/arrow.svg",
-    g2: "/asset/compareSnapshot-imgs/g22.svg",
+    trustpilot: "/newcompare/asset/compareSnapshot-imgs/star.svg",
+    capterra: "/newcompare/asset/compareSnapshot-imgs/arrow.svg",
+    g2: "/newcompare/asset/compareSnapshot-imgs/g22.svg",
   };
 
   const src = iconMap[icon];
@@ -50,7 +50,7 @@ function getLabelIcon(icon) {
 
   return (
     <>
-      {src !== "/asset/compareSnapshot-imgs/g22.svg" ? (
+      {src !== "/newcompare/asset/compareSnapshot-imgs/g22.svg" ? (
         <Image
           src={src}
           alt={icon}
@@ -147,7 +147,7 @@ export default function CompareSnapshot() {
     >
       <h2
         className="heading md:mb-16 mb-10"
-    
+
       >
         {title}
       </h2>
@@ -177,8 +177,8 @@ export default function CompareSnapshot() {
                         i === 0
                           ? "12px 0 0 0"
                           : i === rows.length - 1
-                          ? "0 0 0 12px"
-                          : "0",
+                            ? "0 0 0 12px"
+                            : "0",
                     }}
                   >
                     {row.icon && getLabelIcon(row.icon)}
@@ -240,7 +240,7 @@ export default function CompareSnapshot() {
                     alignItems: "center",
                     justifyContent: "center",
                     height: rowH,
-               
+
                     borderBottom:
                       i < rows.length - 1
                         ? "1px solid rgba(0,0,0,0.08)"
@@ -282,7 +282,7 @@ export default function CompareSnapshot() {
                     alignItems: "center",
                     justifyContent: "center",
                     height: rowH,
-                   
+
                     background: "#fff",
                     borderBottom:
                       i < rows.length - 1
@@ -292,8 +292,8 @@ export default function CompareSnapshot() {
                       i === 0
                         ? "0 12px 0 0"
                         : i === rows.length - 1
-                        ? "0 0 12px 0"
-                        : "0",
+                          ? "0 0 12px 0"
+                          : "0",
                   }}
                 >
                   {renderValue(row.micro1, row.type, false)}

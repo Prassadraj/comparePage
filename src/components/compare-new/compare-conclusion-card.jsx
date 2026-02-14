@@ -13,8 +13,8 @@ function CompareConclusionCard({ data, accent }) {
         <Image
           src={
             data.logo == "H"
-              ? "/asset/logo.png"
-              : "/asset/bottomLine-imgs/microLogo.png"
+              ? "/newcompare/asset/logo.png"
+              : "/newcompare/asset/bottomLine-imgs/microLogo.png"
           }
           width={400}
           alt="logo"

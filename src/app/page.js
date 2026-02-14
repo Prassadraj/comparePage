@@ -1,19 +1,19 @@
-import BriefOne from "@/components/compare/compare-brief/brief-one";
-import CompareBottom from "@/components/compare/compare-bottom";
-import CompareConclusion from "@/components/compare/compare-conclusion";
-import CostPricingStructure from "@/components/compare/compare-costpricing";
-import CompareEco from "@/components/compare/compare-ecosystem";
-import FAQ from "@/components/compare/compare-faq";
-import FeatureComparison from "@/components/compare/compare-feature-compare";
-import HyringFooter from "@/components/compare/compare-footer";
-import CompareGlance from "@/components/compare/compare-glance";
-import CompapreHero from "@/components/compare/compare-hero";
-import Micro1Review from "@/components/compare/compare-hyringreview-product";
-import CompareOverview from "@/components/compare/compare-overview";
-import CompareSnapshot from "@/components/compare/compare-snapshot/compare-snapshot";
-import CompareTable from "@/components/compare/compare-table-content";
-import ClientTestimonials from "@/components/compare/compare-testimonial";
-import HyringWorkflow from "@/components/compare/compare-workflow";
+import BriefOne from "@/components/compare-new/compare-brief/brief-one";
+import CompareBottom from "@/components/compare-new/compare-bottom";
+import CompareConclusion from "@/components/compare-new/compare-conclusion";
+import CostPricingStructure from "@/components/compare-new/compare-costpricing";
+import CompareEco from "@/components/compare-new/compare-ecosystem";
+import FAQ from "@/components/compare-new/compare-faq";
+import FeatureComparison from "@/components/compare-new/compare-feature-compare";
+import HyringFooter from "@/components/compare-new/compare-footer";
+import CompareGlance from "@/components/compare-new/compare-glance";
+import CompapreHero from "@/components/compare-new/compare-hero";
+import Micro1Review from "@/components/compare-new/compare-hyringreview-product";
+import CompareOverview from "@/components/compare-new/compare-overview";
+import CompareSnapshot from "@/components/compare-new/compare-snapshot/compare-snapshot";
+import CompareTable from "@/components/compare-new/compare-table-content";
+import ClientTestimonials from "@/components/compare-new/compare-testimonial";
+import HyringWorkflow from "@/components/compare-new/compare-workflow";
 import {
   briefDataOne,
   comparePlateformData,
@@ -31,8 +31,8 @@ import {
   compareEcosystemData,
   compareTestimonialData,
   compareFaqData,
-} from "@/components/compare/data";
-import ComparePlatform from "@/components/compare/compare-platform";
+} from "@/components/compare-new/data";
+import ComparePlatform from "@/components/compare-new/compare-platform";
 
 export default function Home() {
   const briefdataOne = briefDataOne;

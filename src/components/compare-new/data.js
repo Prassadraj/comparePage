@@ -11,16 +11,16 @@ export const compareHeroData = {
     writtenBy: {
       name: "Team Hyring",
       role: "Written by",
-      image: "/asset/logo.png",
+      image: "/newcompare/asset/logo.png",
     },
     factCheckedBy: {
       name: "Adithyan RK",
       role: "Fact Checked by",
-      image: "/asset/main.png",
+      image: "/newcompare/asset/main.png",
       verified: true,
     },
   },
-  frameImage: "/compare/frame.png",
+  frameImage: "/newcompare/compare/frame.png",
 };
 
 export const Tabledata = [
@@ -187,7 +187,7 @@ export const comparisonData = {
       key: "hyring",
       name: "hyring",
       highlight: true,
-      logo: "/hyring-logo.svg",
+      logo: "/newcompare/svgs/hyring-logo.svg",
     },
     {
       key: "micro1",
@@ -412,7 +412,7 @@ export const hyringReview = {
     {
       id: 0,
       title: "AI Video Interviewer",
-      icon: "/asset/productEcosystem-imgs/video.svg",
+      icon: "/newcompare/asset/productEcosystem-imgs/video.svg",
       description:
         "Asynchronous and live two-way video interviews with dynamic follow-ups",
       image:
@@ -421,7 +421,7 @@ export const hyringReview = {
     {
       id: 1,
       title: "AI Phone Interviewer",
-      icon: "/asset/productEcosystem-imgs/call.svg",
+      icon: "/newcompare/asset/productEcosystem-imgs/call.svg",
       description: "Automated voice-based screening for high-volume roles",
       image:
         "https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&h=500&fit=crop",
@@ -429,7 +429,7 @@ export const hyringReview = {
     {
       id: 2,
       title: "AI Coding Interviewer",
-      icon: "/asset/productEcosystem-imgs/code-circle.svg",
+      icon: "/newcompare/asset/productEcosystem-imgs/code-circle.svg",
       description: "Technical assessments for developer and engineering roles",
       image:
         "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&h=500&fit=crop",
@@ -437,7 +437,7 @@ export const hyringReview = {
     {
       id: 3,
       title: "AI Resume Scanner",
-      icon: "/asset/productEcosystem-imgs/document-text.svg",
+      icon: "/newcompare/asset/productEcosystem-imgs/document-text.svg",
       description:
         "Automated high volume resume scanning for L1-level interviews (thousands at a time)",
       image:
@@ -446,7 +446,7 @@ export const hyringReview = {
     {
       id: 4,
       title: "English Proficiency Test",
-      icon: "/asset/productEcosystem-imgs/messages-2.svg",
+      icon: "/newcompare/asset/productEcosystem-imgs/messages-2.svg",
       description:
         "English communication test to filter candidates by their level of proficiency in English",
       image:
@@ -1046,9 +1046,9 @@ export const vettingData = [
 // comparePlateform
 
 export const comparePlateformData = [
-  { img: "/asset/otherPlatform-imgs/frame1.svg" },
-  { img: "/asset/otherPlatform-imgs/frame2.svg" },
-  { img: "/asset/otherPlatform-imgs/frame3.svg" },
+  { img: "/newcompare/asset/otherPlatform-imgs/frame1.svg" },
+  { img: "/newcompare/asset/otherPlatform-imgs/frame2.svg" },
+  { img: "/newcompare/asset/otherPlatform-imgs/frame3.svg" },
 ];
 
 // ===========================

@@ -19,14 +19,14 @@ function FeatureComparison({ data }) {
         {section.heading}
       </h3>
       <div className=" md:hidden items-center justify-center rounded-2xl  h-full mb-5">
-          <Image
-            src="/compare/feature.png"
-            width={500}
-            alt="features"
-            height={600}
-            className="object-contain "
-          />
-        </div>
+        <Image
+          src="/newcompare/compare/feature.png"
+          width={500}
+          alt="features"
+          height={600}
+          className="object-contain "
+        />
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10  items-center mb-10">
         {/* Text */}
@@ -38,7 +38,7 @@ function FeatureComparison({ data }) {
         {/* Decorative panel */}
         <div className="hidden lg:flex items-center justify-center rounded-2xl  h-full min-h-[280px]">
           <Image
-            src="/compare/feature.png"
+            src="/newcompare/compare/feature.png"
             width={500}
             alt="features"
             height={600}
@@ -53,8 +53,8 @@ function FeatureComparison({ data }) {
           className="absolute  rounded-r-4xl -top-4 left-6 bg-white border border-green-300 px-2 
         py-1 rounded-md text-sm font-bold flex items-center gap-1"
         >
-          <Image src="/asset/win.svg" width={300} height={300} alt={winner.title}
-          className="w-5 aspect-auto" />{winner.title}
+          <Image src="/newcompare/asset/win.svg" width={300} height={300} alt={winner.title}
+            className="w-5 aspect-auto" />{winner.title}
         </span>
         <p className="grey1 font-normal  text-[18px] md:text-[20px]">
           {winner.text} <span className="font-semibold">{winner.highlight}</span>
@@ -72,8 +72,8 @@ function SideBlock({ data }) {
         <Image
           src={
             data.logo == "H"
-              ? "/asset/logo.png"
-              : "/asset/bottomLine-imgs/microLogo.png"
+              ? "/newcompare/asset/logo.png"
+              : "/newcompare/asset/bottomLine-imgs/microLogo.png"
           }
           width={400}
           height={400}

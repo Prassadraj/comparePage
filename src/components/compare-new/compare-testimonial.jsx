@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Arrow } from "../../../public/asset/arrow";
+import { Arrow } from "../../../public/newcompare/asset/arrow";
 
 function useWidth() {
   const [w, setW] = useState(

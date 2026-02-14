@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { circleTick } from "../../../public/asset/arrow";
+import { circleTick } from "../../../public/newcompare/asset/arrow";
 
 function CompapreHero({ data }) {
   const { meta, authors, frameImage } = data;
@@ -9,7 +9,7 @@ function CompapreHero({ data }) {
     <div className="mx-auto bg-[#102713] w-full relative">
       <div className="absolute inset-0 flex items-center justify-center">
         <Image
-          src="/asset/dots.png"
+          src="/newcompare/asset/dots.png"
           width={900}
           height={900}
           alt="Popup"
@@ -110,7 +110,7 @@ function CompapreHero({ data }) {
 
             <div className="absolute -top-4 -right-4 md:-top-6 md:-right-10 2xl:-top-8 2xl:-right-12 rotate-6">
               <Image
-                src="/asset/popup.png"
+                src="/newcompare/asset/popup.png"
                 width={85}
                 height={53}
                 alt="Popup"

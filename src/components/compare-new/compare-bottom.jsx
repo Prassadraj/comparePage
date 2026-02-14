@@ -21,7 +21,7 @@ function CompareBottom() {
           <div className=" flex flex-col md:gap-3 gap-4 grey1 text-[16px] md:text-[18px]">
             <div className="flex gap-2 items-start md:items-center p-2 md:p-4 bg-[#EBFAE2] border border-[#B0EA8B] rounded-sm">
               <Image
-                src="/asset/bottomLine-imgs/hyringLogo.png"
+                src="/newcompare/asset/bottomLine-imgs/hyringLogo.png"
                 alt="hyringLogo"
                 className="w-24 md:w-6 sm:w-10  aspect-auto"
                 width={400}
@@ -34,7 +34,7 @@ function CompareBottom() {
             </div>
             <div className="flex gap-2 items-start md:items-center p-2  md:p-4 bg-[#CACACA4D] border border-[#CACACA] rounded-sm">
               <Image
-                src="/asset/bottomLine-imgs/microLogo.png"
+                src="/newcompare/asset/bottomLine-imgs/microLogo.png"
                 alt="hyringLogo"
                 className="w-24 md:w-6 sm:w-8  aspect-auto"
                 width={400}

@@ -173,7 +173,8 @@ export default function Micro1Review({ data }) {
               }}
             >
               {/* Background container with background image */}
-              <div className="absolute footer-green inset-0 bg-cover bg-center bg-no-repeat rounded-[18px] overflow-hidden">
+              <div className="absolute footer-green inset-0 bg-cover bg-center bg-no-repeat rounded-[18px] overflow-hidden"
+              style={{backgroundImage:"url('/newcompare/asset/productEcosystem-imgs/bgg.png')"}}>
                 {/* Luminosity overlay image */}
                 <div
                   className="absolute bg-cover bg-center inset-0"

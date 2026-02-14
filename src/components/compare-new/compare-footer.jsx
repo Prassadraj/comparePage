@@ -60,7 +60,7 @@ export default function HyringFooter() {
   const Heading = ({ children }) => (
     <h4
       className="!text-xs heading md:!text-base font-bold uppercase mb-5 !text-white"
-      style={{  letterSpacing: "2.5px" }}
+      style={{ letterSpacing: "2.5px" }}
     >
       {children}
     </h4>
@@ -82,7 +82,7 @@ export default function HyringFooter() {
             style={{ color: "#56B73E" }}
           >
             <Image
-              src="/asset/footer-imgs/hyring.png"
+              src="/newcompare/asset/footer-imgs/hyring.png"
               alt="hyring"
               width={400}
               height={400}
@@ -97,7 +97,7 @@ export default function HyringFooter() {
           <div className="flex gap-2">
             <div className="w-12 h-10 rounded-full flex items-center justify-center ">
               <Image
-                src="/asset/footer-imgs/soc.png"
+                src="/newcompare/asset/footer-imgs/soc.png"
                 alt="hyring"
                 width={400}
                 height={400}
@@ -106,7 +106,7 @@ export default function HyringFooter() {
             </div>
             <div className="w-10 h-10 rounded-full flex items-center justify-center ">
               <Image
-                src="/asset/footer-imgs/iso.png"
+                src="/newcompare/asset/footer-imgs/iso.png"
                 alt="hyring"
                 width={400}
                 height={400}
@@ -259,7 +259,7 @@ export default function HyringFooter() {
           style={{ padding: "32px 16px" }}
         >
           <Image
-            src="/asset/footer-imgs/hyring1.svg"
+            src="/newcompare/asset/footer-imgs/hyring1.svg"
             width={600}
             height={600}
             className="w-[500px] md:w-[800px]"
