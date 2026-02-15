@@ -32,7 +32,8 @@ body {
 /* Regular - 400 */
 @font-face {
   font-family: "ClashDisplay";
-  src: url("/fonts/clash/ClashDisplay-Regular.otf") format("opentype");
+  
+  src: url("/newcompare/fonts/clash/ClashDisplay-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -41,7 +42,7 @@ body {
 /* SemiBold - 600 */
 @font-face {
   font-family: "ClashDisplay";
-  src: url("/fonts/clash/ClashDisplay-Semibold.otf") format("opentype");
+  src: url("/newcompare/fonts/clash/ClashDisplay-Semibold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -50,7 +51,7 @@ body {
 /* Bold - 700 */
 @font-face {
   font-family: "ClashDisplay";
-  src: url("/fonts/clash/ClashDisplay-Bold.otf") format("opentype");
+  src: url("/newcompare/fonts/clash/ClashDisplay-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
